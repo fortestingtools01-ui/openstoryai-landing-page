@@ -93,16 +93,16 @@
     .main{flex:1;display:flex;flex-direction:column;align-items:center;padding:0 24px;position:relative;z-index:10;}
 
     /* ===== HERO ===== */
-    .hero{text-align:center;padding:80px 0 44px;max-width:960px;margin:0 auto;}
+    .hero{text-align:center;padding:88px 0 52px;max-width:900px;margin:0 auto;}
     .badge{
       display:inline-block;border:1px solid var(--accent-border);background:var(--accent-dim);
-      padding:8px 26px;border-radius:100px;font-size:12px;font-weight:700;
-      letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:36px;
+      padding:7px 24px;border-radius:100px;font-size:11px;font-weight:700;
+      letter-spacing:0.18em;color:var(--accent);text-transform:uppercase;margin-bottom:40px;
       transition:all 0.35s var(--ease);
     }
     .badge:hover{background:rgba(212,184,90,0.16);border-color:rgba(212,184,90,0.32);}
     .hero h1{
-      font-size:clamp(32px,5.5vw,72px);font-weight:900;line-height:1.15;
+      font-size:clamp(32px,5.5vw,64px);font-weight:900;line-height:1.12;
       letter-spacing:-0.03em;margin-bottom:28px;text-wrap:balance;
     }
     .hero h1 .gd{
@@ -110,43 +110,37 @@
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;
       background-clip:text;
     }
-    .hero .sub{font-size:clamp(16px,1.4vw,19px);color:var(--fg-secondary);max-width:600px;margin:0 auto;line-height:1.9;letter-spacing:0.015em;opacity:0.85;}
-    .hero .sub-hint{font-size:12px;color:var(--muted);margin-top:24px;letter-spacing:0.08em;opacity:0.45;text-transform:uppercase;}
+    .hero .sub{font-size:clamp(15px,1.3vw,17px);color:var(--fg-secondary);max-width:520px;margin:0 auto;line-height:1.95;letter-spacing:0.01em;opacity:0.75;}
+    .hero .sub-hint{font-size:11px;color:var(--muted);margin-top:28px;letter-spacing:0.08em;opacity:0.35;text-transform:uppercase;}
 
     /* ===== GRAPH ===== */
-    .gw{width:100%;max-width:820px;margin:0 auto 28px;padding:0 16px;position:relative;}
+    .gw{width:100%;max-width:780px;margin:0 auto 36px;padding:0 16px;position:relative;}
     .gw svg{width:100%;height:auto;display:block;}
     .gn{cursor:pointer;}
     .gn:focus{outline:2px solid var(--accent);outline-offset:8px;border-radius:50%;}
 
     /* ===== MARKET STRIP ===== */
     .mkts{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
-      max-width:860px;width:100%;margin:0 auto 28px;
+      display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+      max-width:780px;width:100%;margin:0 auto 32px;
     }
     .mkt{
       display:flex;flex-direction:column;align-items:center;
       border-radius:var(--radius);border:1px solid var(--border);
-      background:rgba(17,24,39,0.4);padding:32px 20px;
+      background:rgba(17,24,39,0.35);padding:36px 20px;
       text-align:center;transition:all 0.4s var(--ease);
     }
-    .mkt:hover{border-color:var(--border-hover);background:rgba(17,24,39,0.7);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.18);}
-    .mkt-dot{width:8px;height:8px;border-radius:50%;margin-bottom:18px;opacity:0.7;}
-    .mkt-v{font-size:clamp(28px,3.5vw,34px);font-weight:900;margin-bottom:6px;letter-spacing:-0.02em;}
-    .mkt-l{font-size:clamp(16px,1.4vw,18px);font-weight:700;color:var(--fg);}
-    .mkt-s{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;}
-    .mkt-vision{text-align:center;margin-bottom:12px;max-width:780px;margin-left:auto;margin-right:auto;word-break:keep-all;}
-    .mkt-hl{font-weight:600;color:var(--fg-secondary);font-size:clamp(18px,2.4vw,22px);letter-spacing:-0.005em;line-height:1.75;font-style:normal;}
-    .mkt-hl .hl-accent{font-weight:800;color:var(--accent-soft);}
-    .mkt-tagline{
-      text-align:center;font-size:clamp(18px,2.4vw,22px);font-weight:600;line-height:1.75;
-      color:var(--fg-secondary);letter-spacing:-0.005em;
-      max-width:780px;margin:0 auto 72px;white-space:nowrap;
-    }
-    .em-gold{font-style:normal;color:var(--accent-soft);font-weight:800;}
+    .mkt:hover{border-color:var(--border-hover);background:rgba(17,24,39,0.6);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.15);}
+    .mkt-dot{width:6px;height:6px;border-radius:50%;margin-bottom:20px;opacity:0.6;}
+    .mkt-v{font-size:clamp(26px,3vw,32px);font-weight:900;margin-bottom:8px;letter-spacing:-0.02em;}
+    .mkt-l{font-size:clamp(15px,1.2vw,17px);font-weight:700;color:var(--fg);}
+    .mkt-s{font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:0.06em;text-transform:uppercase;opacity:0.7;}
+    .mkt-vision{text-align:center;margin-bottom:0;max-width:700px;margin-left:auto;margin-right:auto;word-break:keep-all;padding-bottom:80px;}
+    .mkt-hl{font-weight:500;color:var(--fg-secondary);font-size:clamp(17px,2.2vw,21px);letter-spacing:-0.005em;line-height:1.8;font-style:normal;opacity:0.85;}
+    .mkt-hl .hl-brand{font-weight:800;color:var(--accent);letter-spacing:-0.01em;}
 
     /* ===== FOOTER ===== */
-    .foot{text-align:center;padding:32px 28px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);opacity:0.4;letter-spacing:0.06em;}
+    .foot{text-align:center;padding:40px 28px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);opacity:0.3;letter-spacing:0.06em;}
 
     /* ===== OVERLAY / MODAL ===== */
     .ov{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;}
@@ -219,19 +213,19 @@
     }
     .mh-i:hover{border-color:var(--border-hover);}
     .mh-i .v{font-size:24px;font-weight:900;color:var(--accent);letter-spacing:-0.02em;line-height:1.35;}
-    .mh-i .v strong{font-weight:900;color:var(--accent-soft);text-decoration:underline;text-decoration-color:rgba(212,184,90,0.25);text-underline-offset:4px;text-decoration-thickness:2px;}
+    .mh-i .v strong{font-weight:900;color:var(--accent-soft);}
     .mh-i .l{font-size:13px;color:var(--muted);margin-top:8px;font-weight:500;letter-spacing:0.01em;}
 
     /* Venn */
-    .vw{width:100%;max-width:640px;margin:0 auto 28px;}
+    .vw{width:100%;max-width:580px;margin:0 auto 24px;}
     .vw svg{width:100%;height:auto;}
-    .vleg{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px;}
+    .vleg{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:24px;}
     .vleg-i{
-      display:flex;align-items:center;gap:7px;padding:7px 14px;
-      border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,0.015);
-      font-size:13px;color:var(--fg-secondary);font-weight:600;
+      display:flex;align-items:center;gap:6px;padding:6px 12px;
+      border-radius:8px;border:1px solid var(--border);background:rgba(255,255,255,0.015);
+      font-size:12px;color:var(--fg-secondary);font-weight:600;opacity:0.8;
     }
-    .vd{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+    .vd{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
 
     /* Timeline */
     .tl{position:relative;padding-left:28px;}
@@ -303,16 +297,15 @@
       .mh-i .v{font-size:22px;}
       .mh-i .l{font-size:12px;}
       .mf{font-size:14px;}
-      .mkt-hl{font-size:clamp(15px,2.2vw,18px);}
-      .mkt-tagline{font-size:clamp(15px,2.2vw,18px);white-space:normal;}
+      .mkt-hl{font-size:clamp(15px,2.2vw,17px);}
+      .mkt-vision{padding-bottom:56px;}
     }
     @media(max-width:480px){
       .hdr{padding:12px 16px;}
       .logo-t{font-size:12px;}
       .hero{padding:36px 0 16px;}
-      .mkt-vision{padding:0 12px;}
+      .mkt-vision{padding:0 12px;padding-bottom:48px;}
       .mkt-hl{font-size:14px;}
-      .mkt-tagline{font-size:clamp(12px,3.2vw,15px);margin-bottom:56px;white-space:normal;}
       .ci{padding:24px 16px 20px;}
       .mh{grid-template-columns:1fr;}
       .fw{max-width:340px;}
@@ -401,8 +394,7 @@
         <div class="mkt-s">Digital Assets</div>
       </div>
     </div>
-    <p class="mkt-vision"><strong class="mkt-hl">세 시장의 융합점에서, <span class="hl-accent">차세대 IP 파운드리</span>가 탄생합니다.</strong></p>
-    <p class="mkt-tagline"><em class="em-gold">70억 인구</em>의 상상력을 자산으로, 이제 누구나 <em class="em-gold">&lt;오징어 게임&gt;</em>을 만듭니다.</p>
+    <p class="mkt-vision"><span class="mkt-hl">세 시장의 융합점에서, 차세대 IP 파운드리 <span class="hl-brand">Open Story AI</span>가 탄생합니다.</span></p>
   </main>
 
   <footer class="foot">&copy; 2026 Open Story AI. All rights reserved.</footer>
@@ -578,7 +570,7 @@
         g.onmouseleave=function(){hovN=null;rGS();};
 
         var gc=document.createElementNS(NS,"circle");gc.id="gc-"+n.id;
-        gc.setAttribute("cx",n.x);gc.setAttribute("cy",n.y);gc.setAttribute("r","46");
+        gc.setAttribute("cx",n.x);gc.setAttribute("cy",n.y);gc.setAttribute("r","44");
         gc.setAttribute("fill","url(#gw-"+n.id+")");gc.setAttribute("opacity","0");
         gc.style.transition="opacity 0.4s ease";g.appendChild(gc);
 
@@ -591,7 +583,7 @@
         pg.style.display="none";g.appendChild(pg);
 
         var c=document.createElementNS(NS,"circle");c.id="nc-"+n.id;
-        c.setAttribute("cx",n.x);c.setAttribute("cy",n.y);c.setAttribute("r","16");
+        c.setAttribute("cx",n.x);c.setAttribute("cy",n.y);c.setAttribute("r","15");
         c.setAttribute("fill","url(#sp-"+n.id+")");
         c.style.transition="all 0.3s ease";g.appendChild(c);
 
@@ -601,16 +593,16 @@
         g.appendChild(hl);
 
         var tk=document.createElementNS(NS,"text");tk.id="lk-"+n.id;
-        tk.setAttribute("x",n.x);tk.setAttribute("y",n.y+36);
+        tk.setAttribute("x",n.x);tk.setAttribute("y",n.y+34);
         tk.setAttribute("text-anchor","middle");tk.setAttribute("fill","#8896A7");
-        tk.setAttribute("font-size","14");tk.setAttribute("font-weight","700");
+        tk.setAttribute("font-size","13");tk.setAttribute("font-weight","700");
         tk.setAttribute("font-family","inherit");
         tk.style.transition="all 0.3s ease";
         tk.textContent=n.kr;g.appendChild(tk);
 
         var te=document.createElementNS(NS,"text");te.id="le-"+n.id;
-        te.setAttribute("x",n.x);te.setAttribute("y",n.y+50);
-        te.setAttribute("text-anchor","middle");te.setAttribute("fill","rgba(255,255,255,0.12)");
+        te.setAttribute("x",n.x);te.setAttribute("y",n.y+47);
+        te.setAttribute("text-anchor","middle");te.setAttribute("fill","rgba(255,255,255,0.10)");
         te.setAttribute("font-size","8");te.setAttribute("font-weight","500");
         te.setAttribute("font-family","inherit");te.setAttribute("letter-spacing","0.12em");
         te.style.transition="all 0.3s ease";
@@ -634,7 +626,7 @@
         var isA=activeN===n.id,isH=hovN===n.id;
         document.getElementById("gc-"+n.id).setAttribute("opacity",(isA||isH)?"1":"0");
         document.getElementById("pl-"+n.id).style.display=isA?"block":"none";
-        document.getElementById("nc-"+n.id).setAttribute("r",isA?"20":isH?"18":"16");
+        document.getElementById("nc-"+n.id).setAttribute("r",isA?"19":isH?"17":"15");
         var lk=document.getElementById("lk-"+n.id);
         lk.setAttribute("fill",isA?"#D4B85A":isH?"#F0F2F5":"#8896A7");
         lk.setAttribute("font-weight",isA?"800":"700");
@@ -660,24 +652,24 @@
         h+='<div class="vw">';
         h+='<svg viewBox="0 0 600 520" aria-label="Venn Diagram: 3 Market Convergence">';
         h+='<defs>';
-        h+='<filter id="vg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>';
+        h+='<filter id="vg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>';
         h+='</defs>';
-        /* Three circles — r=155, centers positioned for clear overlap */
-        h+='<circle cx="218" cy="195" r="155" fill="rgba(212,184,90,0.05)" stroke="#D4B85A" stroke-width="1" stroke-opacity="0.25"/>';
-        h+='<circle cx="382" cy="195" r="155" fill="rgba(90,124,156,0.05)" stroke="#5A7C9C" stroke-width="1" stroke-opacity="0.25"/>';
-        h+='<circle cx="300" cy="338" r="155" fill="rgba(158,139,64,0.05)" stroke="#9E8B40" stroke-width="1" stroke-opacity="0.25"/>';
+        /* Three circles -- r=152, positioned for balanced overlap and room for centered labels */
+        h+='<circle cx="220" cy="200" r="152" fill="rgba(212,184,90,0.04)" stroke="#D4B85A" stroke-width="0.8" stroke-opacity="0.2"/>';
+        h+='<circle cx="380" cy="200" r="152" fill="rgba(90,124,156,0.04)" stroke="#5A7C9C" stroke-width="0.8" stroke-opacity="0.2"/>';
+        h+='<circle cx="300" cy="340" r="152" fill="rgba(158,139,64,0.04)" stroke="#9E8B40" stroke-width="0.8" stroke-opacity="0.2"/>';
         /* Center intersection glow */
-        h+='<circle cx="300" cy="243" r="40" fill="rgba(212,184,90,0.10)" filter="url(#vg)"/>';
-        /* Labels — positioned inside each circle's exclusive area */
-        h+='<text x="150" y="118" text-anchor="middle" fill="#D4B85A" font-size="28" font-weight="900" opacity="0.9">$66.6B</text>';
-        h+='<text x="150" y="145" text-anchor="middle" fill="#D4B85A" font-size="14" font-weight="600" opacity="0.6">\uC0DD\uC131\uD615 AI</text>';
-        h+='<text x="450" y="118" text-anchor="middle" fill="#5A7C9C" font-size="28" font-weight="900" opacity="0.9">$38.4B</text>';
-        h+='<text x="450" y="145" text-anchor="middle" fill="#5A7C9C" font-size="14" font-weight="600" opacity="0.6">IP \uB77C\uC774\uC120\uC2F1</text>';
-        h+='<text x="300" y="448" text-anchor="middle" fill="#9E8B40" font-size="28" font-weight="900" opacity="0.9">$12.3B</text>';
-        h+='<text x="300" y="475" text-anchor="middle" fill="#9E8B40" font-size="14" font-weight="600" opacity="0.6">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
+        h+='<circle cx="300" cy="247" r="38" fill="rgba(212,184,90,0.08)" filter="url(#vg)"/>';
+        /* Labels -- centered inside each circle exclusive zone */
+        h+='<text x="148" y="128" text-anchor="middle" fill="#D4B85A" font-size="26" font-weight="800" opacity="0.85">$66.6B</text>';
+        h+='<text x="148" y="152" text-anchor="middle" fill="#D4B85A" font-size="13" font-weight="600" opacity="0.5">\uC0DD\uC131\uD615 AI</text>';
+        h+='<text x="452" y="128" text-anchor="middle" fill="#5A7C9C" font-size="26" font-weight="800" opacity="0.85">$38.4B</text>';
+        h+='<text x="452" y="152" text-anchor="middle" fill="#5A7C9C" font-size="13" font-weight="600" opacity="0.5">IP \uB77C\uC774\uC120\uC2F1</text>';
+        h+='<text x="300" y="450" text-anchor="middle" fill="#9E8B40" font-size="26" font-weight="800" opacity="0.85">$12.3B</text>';
+        h+='<text x="300" y="474" text-anchor="middle" fill="#9E8B40" font-size="13" font-weight="600" opacity="0.5">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
         /* Center label */
-        h+='<text x="300" y="236" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">Open Story</text>';
-        h+='<text x="300" y="258" text-anchor="middle" fill="#D4B85A" font-size="11" font-weight="600" letter-spacing="0.08em" opacity="0.7">VERTICAL SOLUTION</text>';
+        h+='<text x="300" y="240" text-anchor="middle" fill="#F0F2F5" font-size="16" font-weight="800" opacity="0.95">Open Story AI</text>';
+        h+='<text x="300" y="261" text-anchor="middle" fill="#D4B85A" font-size="10" font-weight="600" letter-spacing="0.1em" opacity="0.55">VERTICAL SOLUTION</text>';
         h+='</svg></div>';
         h+='<div class="vleg">';
         h+='<div class="vleg-i"><div class="vd" style="background:#D4B85A"></div>\uC0DD\uC131\uD615 AI</div>';
@@ -713,7 +705,7 @@
         h+='<circle cx="270" cy="270" r="38" fill="rgba(212,184,90,0.07)" stroke="rgba(212,184,90,0.25)" stroke-width="1"/>';
         h+='<text x="270" y="265" text-anchor="middle" fill="#F0F2F5" font-size="16" font-weight="800">Flywheel</text>';
         h+='<text x="270" y="285" text-anchor="middle" fill="#D4B85A" font-size="11" font-weight="600" opacity="0.8">Quality Loop</text>';
-        /* Top: SPOE — clear above top arc (y=130) */
+        /* Top: SPOE �� clear above top arc (y=130) */
         h+='<rect x="198" y="38" width="144" height="56" rx="12" fill="rgba(58,80,104,0.10)" stroke="rgba(58,80,104,0.28)" stroke-width="1"/>';
         h+='<text x="270" y="62" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">SPOE</text>';
         h+='<text x="270" y="82" text-anchor="middle" fill="#5A7C9C" font-size="12" font-weight="600">\uCC3D\uC791 \uC5D4\uC9C4</text>';
