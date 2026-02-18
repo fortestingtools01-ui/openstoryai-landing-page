@@ -135,17 +135,15 @@
     .mkt-v{font-size:clamp(28px,3.5vw,34px);font-weight:900;margin-bottom:6px;letter-spacing:-0.02em;}
     .mkt-l{font-size:clamp(16px,1.4vw,18px);font-weight:700;color:var(--fg);}
     .mkt-s{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:0.04em;text-transform:uppercase;}
-    .mkt-vision{text-align:center;margin-bottom:16px;max-width:720px;margin-left:auto;margin-right:auto;word-break:keep-all;}
-    .mkt-hl{font-weight:700;color:var(--fg-secondary);font-size:clamp(18px,2.8vw,24px);letter-spacing:-0.01em;line-height:1.7;font-style:normal;}
-    .mkt-hl .hl-accent{font-weight:900;color:var(--accent);position:relative;}
-    .mkt-hl .hl-accent::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--accent);opacity:0.35;border-radius:2px;}
+    .mkt-vision{text-align:center;margin-bottom:12px;max-width:780px;margin-left:auto;margin-right:auto;word-break:keep-all;}
+    .mkt-hl{font-weight:600;color:var(--fg-secondary);font-size:clamp(18px,2.4vw,22px);letter-spacing:-0.005em;line-height:1.75;font-style:normal;}
+    .mkt-hl .hl-accent{font-weight:800;color:var(--accent-soft);}
     .mkt-tagline{
-      text-align:center;font-size:clamp(18px,2.8vw,24px);font-weight:700;line-height:1.7;
-      color:var(--fg-secondary);letter-spacing:-0.01em;
-      max-width:720px;margin:0 auto 72px;white-space:nowrap;
+      text-align:center;font-size:clamp(18px,2.4vw,22px);font-weight:600;line-height:1.75;
+      color:var(--fg-secondary);letter-spacing:-0.005em;
+      max-width:780px;margin:0 auto 72px;white-space:nowrap;
     }
-    .em-gold{font-style:normal;color:var(--accent);font-weight:900;position:relative;}
-    .em-gold::after{content:'';position:absolute;left:0;right:0;bottom:2px;height:2px;background:var(--accent);opacity:0.35;border-radius:2px;}
+    .em-gold{font-style:normal;color:var(--accent-soft);font-weight:800;}
 
     /* ===== FOOTER ===== */
     .foot{text-align:center;padding:32px 28px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);opacity:0.4;letter-spacing:0.06em;}
@@ -225,7 +223,7 @@
     .mh-i .l{font-size:13px;color:var(--muted);margin-top:8px;font-weight:500;letter-spacing:0.01em;}
 
     /* Venn */
-    .vw{width:100%;max-width:560px;margin:0 auto 28px;}
+    .vw{width:100%;max-width:640px;margin:0 auto 28px;}
     .vw svg{width:100%;height:auto;}
     .vleg{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px;}
     .vleg-i{
@@ -305,7 +303,8 @@
       .mh-i .v{font-size:22px;}
       .mh-i .l{font-size:12px;}
       .mf{font-size:14px;}
-      .mkt-tagline{font-size:clamp(14px,2.4vw,18px);white-space:normal;}
+      .mkt-hl{font-size:clamp(15px,2.2vw,18px);}
+      .mkt-tagline{font-size:clamp(15px,2.2vw,18px);white-space:normal;}
     }
     @media(max-width:480px){
       .hdr{padding:12px 16px;}
@@ -579,7 +578,7 @@
         g.onmouseleave=function(){hovN=null;rGS();};
 
         var gc=document.createElementNS(NS,"circle");gc.id="gc-"+n.id;
-        gc.setAttribute("cx",n.x);gc.setAttribute("cy",n.y);gc.setAttribute("r","42");
+        gc.setAttribute("cx",n.x);gc.setAttribute("cy",n.y);gc.setAttribute("r","46");
         gc.setAttribute("fill","url(#gw-"+n.id+")");gc.setAttribute("opacity","0");
         gc.style.transition="opacity 0.4s ease";g.appendChild(gc);
 
@@ -592,7 +591,7 @@
         pg.style.display="none";g.appendChild(pg);
 
         var c=document.createElementNS(NS,"circle");c.id="nc-"+n.id;
-        c.setAttribute("cx",n.x);c.setAttribute("cy",n.y);c.setAttribute("r","15");
+        c.setAttribute("cx",n.x);c.setAttribute("cy",n.y);c.setAttribute("r","16");
         c.setAttribute("fill","url(#sp-"+n.id+")");
         c.style.transition="all 0.3s ease";g.appendChild(c);
 
@@ -602,15 +601,15 @@
         g.appendChild(hl);
 
         var tk=document.createElementNS(NS,"text");tk.id="lk-"+n.id;
-        tk.setAttribute("x",n.x);tk.setAttribute("y",n.y+34);
+        tk.setAttribute("x",n.x);tk.setAttribute("y",n.y+36);
         tk.setAttribute("text-anchor","middle");tk.setAttribute("fill","#8896A7");
-        tk.setAttribute("font-size","13");tk.setAttribute("font-weight","700");
+        tk.setAttribute("font-size","14");tk.setAttribute("font-weight","700");
         tk.setAttribute("font-family","inherit");
         tk.style.transition="all 0.3s ease";
         tk.textContent=n.kr;g.appendChild(tk);
 
         var te=document.createElementNS(NS,"text");te.id="le-"+n.id;
-        te.setAttribute("x",n.x);te.setAttribute("y",n.y+47);
+        te.setAttribute("x",n.x);te.setAttribute("y",n.y+50);
         te.setAttribute("text-anchor","middle");te.setAttribute("fill","rgba(255,255,255,0.12)");
         te.setAttribute("font-size","8");te.setAttribute("font-weight","500");
         te.setAttribute("font-family","inherit");te.setAttribute("letter-spacing","0.12em");
@@ -635,7 +634,7 @@
         var isA=activeN===n.id,isH=hovN===n.id;
         document.getElementById("gc-"+n.id).setAttribute("opacity",(isA||isH)?"1":"0");
         document.getElementById("pl-"+n.id).style.display=isA?"block":"none";
-        document.getElementById("nc-"+n.id).setAttribute("r",isA?"19":isH?"17":"15");
+        document.getElementById("nc-"+n.id).setAttribute("r",isA?"20":isH?"18":"16");
         var lk=document.getElementById("lk-"+n.id);
         lk.setAttribute("fill",isA?"#D4B85A":isH?"#F0F2F5":"#8896A7");
         lk.setAttribute("font-weight",isA?"800":"700");
@@ -659,26 +658,26 @@
       /* ===== VENN ===== */
       if(c.venn){
         h+='<div class="vw">';
-        h+='<svg viewBox="0 0 560 480" aria-label="Venn Diagram: 3 Market Convergence">';
+        h+='<svg viewBox="0 0 600 520" aria-label="Venn Diagram: 3 Market Convergence">';
         h+='<defs>';
-        h+='<filter id="vg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>';
+        h+='<filter id="vg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>';
         h+='</defs>';
-        /* Three circles — r=138, centers spread wider for readable lobes */
-        h+='<circle cx="205" cy="185" r="138" fill="rgba(212,184,90,0.06)" stroke="#D4B85A" stroke-width="1.2" stroke-opacity="0.3"/>';
-        h+='<circle cx="355" cy="185" r="138" fill="rgba(90,124,156,0.06)" stroke="#5A7C9C" stroke-width="1.2" stroke-opacity="0.3"/>';
-        h+='<circle cx="280" cy="310" r="138" fill="rgba(158,139,64,0.06)" stroke="#9E8B40" stroke-width="1.2" stroke-opacity="0.3"/>';
+        /* Three circles — r=155, centers positioned for clear overlap */
+        h+='<circle cx="218" cy="195" r="155" fill="rgba(212,184,90,0.05)" stroke="#D4B85A" stroke-width="1" stroke-opacity="0.25"/>';
+        h+='<circle cx="382" cy="195" r="155" fill="rgba(90,124,156,0.05)" stroke="#5A7C9C" stroke-width="1" stroke-opacity="0.25"/>';
+        h+='<circle cx="300" cy="338" r="155" fill="rgba(158,139,64,0.05)" stroke="#9E8B40" stroke-width="1" stroke-opacity="0.25"/>';
         /* Center intersection glow */
-        h+='<circle cx="280" cy="228" r="36" fill="rgba(212,184,90,0.12)" filter="url(#vg)"/>';
-        /* Labels — in each circle exclusive lobe, well away from intersections */
-        h+='<text x="145" y="102" text-anchor="middle" fill="#D4B85A" font-size="26" font-weight="900">$66.6B</text>';
-        h+='<text x="145" y="126" text-anchor="middle" fill="#D4B85A" font-size="14" font-weight="600" opacity="0.8">\uC0DD\uC131\uD615 AI</text>';
-        h+='<text x="415" y="102" text-anchor="middle" fill="#5A7C9C" font-size="26" font-weight="900">$38.4B</text>';
-        h+='<text x="415" y="126" text-anchor="middle" fill="#5A7C9C" font-size="14" font-weight="600" opacity="0.8">IP \uB77C\uC774\uC120\uC2F1</text>';
-        h+='<text x="280" y="420" text-anchor="middle" fill="#9E8B40" font-size="26" font-weight="900">$12.3B</text>';
-        h+='<text x="280" y="444" text-anchor="middle" fill="#9E8B40" font-size="14" font-weight="600" opacity="0.8">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
+        h+='<circle cx="300" cy="243" r="40" fill="rgba(212,184,90,0.10)" filter="url(#vg)"/>';
+        /* Labels — positioned inside each circle's exclusive area */
+        h+='<text x="150" y="118" text-anchor="middle" fill="#D4B85A" font-size="28" font-weight="900" opacity="0.9">$66.6B</text>';
+        h+='<text x="150" y="145" text-anchor="middle" fill="#D4B85A" font-size="14" font-weight="600" opacity="0.6">\uC0DD\uC131\uD615 AI</text>';
+        h+='<text x="450" y="118" text-anchor="middle" fill="#5A7C9C" font-size="28" font-weight="900" opacity="0.9">$38.4B</text>';
+        h+='<text x="450" y="145" text-anchor="middle" fill="#5A7C9C" font-size="14" font-weight="600" opacity="0.6">IP \uB77C\uC774\uC120\uC2F1</text>';
+        h+='<text x="300" y="448" text-anchor="middle" fill="#9E8B40" font-size="28" font-weight="900" opacity="0.9">$12.3B</text>';
+        h+='<text x="300" y="475" text-anchor="middle" fill="#9E8B40" font-size="14" font-weight="600" opacity="0.6">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
         /* Center label */
-        h+='<text x="280" y="222" text-anchor="middle" fill="#F0F2F5" font-size="17" font-weight="900">Open Story</text>';
-        h+='<text x="280" y="243" text-anchor="middle" fill="#D4B85A" font-size="12" font-weight="700" opacity="0.85">Vertical Solution</text>';
+        h+='<text x="300" y="236" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">Open Story</text>';
+        h+='<text x="300" y="258" text-anchor="middle" fill="#D4B85A" font-size="11" font-weight="600" letter-spacing="0.08em" opacity="0.7">VERTICAL SOLUTION</text>';
         h+='</svg></div>';
         h+='<div class="vleg">';
         h+='<div class="vleg-i"><div class="vd" style="background:#D4B85A"></div>\uC0DD\uC131\uD615 AI</div>';
