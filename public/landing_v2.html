@@ -132,7 +132,7 @@
     .mkt-v{font-size:30px;font-weight:900;margin-bottom:4px;letter-spacing:-0.02em;}
     .mkt-l{font-size:16px;font-weight:700;color:var(--fg);}
     .mkt-s{font-size:13px;color:var(--muted);margin-top:3px;letter-spacing:0.02em;}
-    .mkt-footer{text-align:center;font-size:15px;color:var(--muted);margin-bottom:56px;line-height:1.8;opacity:0.75;max-width:520px;margin-left:auto;margin-right:auto;}
+    .mkt-footer{text-align:center;font-size:15px;color:var(--muted);margin-bottom:56px;line-height:2;opacity:0.8;max-width:560px;margin-left:auto;margin-right:auto;word-break:keep-all;}
 
     /* ===== FOOTER ===== */
     .foot{text-align:center;padding:36px 28px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);opacity:0.5;letter-spacing:0.04em;}
@@ -206,6 +206,7 @@
       background:rgba(255,255,255,0.02);padding:24px 20px;text-align:center;
     }
     .mh-i .v{font-size:26px;font-weight:900;color:var(--accent);letter-spacing:-0.02em;line-height:1.3;}
+    .mh-i .v strong{font-weight:900;color:#E8D88A;text-decoration:underline;text-decoration-color:rgba(212,184,90,0.3);text-underline-offset:4px;}
     .mh-i .l{font-size:14px;color:var(--muted);margin-top:8px;font-weight:500;}
 
     /* Venn */
@@ -241,7 +242,7 @@
     .tl-p p{font-size:16px;color:var(--muted);line-height:1.8;}
 
     /* Flywheel */
-    .fw{width:100%;max-width:480px;margin:0 auto 32px;}
+    .fw{width:100%;max-width:580px;margin:0 auto 36px;}
     .fw svg{width:100%;height:auto;}
 
     /* BM grid */
@@ -257,7 +258,12 @@
     .bmc p{font-size:15px;color:var(--muted);line-height:1.7;}
 
     /* Modal footer */
-    .mf{font-size:16px;color:var(--muted);border-top:1px solid var(--border);padding-top:22px;line-height:1.8;margin-top:14px;}
+    .mf{
+      font-size:17px;color:var(--accent);border-top:1px solid var(--border);
+      padding-top:24px;line-height:1.8;margin-top:18px;
+      font-weight:600;text-align:center;letter-spacing:0.02em;
+      font-style:italic;opacity:0.85;
+    }
 
     /* ===== RESPONSIVE ===== */
     @media(max-width:768px){
@@ -290,8 +296,8 @@
       .mkt-footer{font-size:13px;padding:0 8px;}
       .ci{padding:28px 18px 24px;}
       .mh{grid-template-columns:1fr;}
-      .fw{max-width:320px;}
-      .vw{max-width:320px;}
+      .fw{max-width:340px;}
+      .vw{max-width:340px;}
     }
   </style>
 </head>
@@ -375,7 +381,7 @@
         <div class="mkt-s">Digital Assets</div>
       </div>
     </div>
-    <p class="mkt-footer">세 시장이 융합하는 지점에서, 차세대 IP 파운드리 Open Story AI가 탄생합니다.</p>
+    <p class="mkt-footer">세 시장이 융합하는 지점에서, 차세대 IP 파운드리 Open Story AI가 탄생합니다.<br>70억 인구의 상상력을 자산으로. 누구나 &lt;오징어 게임&gt;을 만들 수 있는 세상으로.</p>
   </main>
 
   <footer class="foot">&copy; 2026 Open Story AI. All rights reserved.</footer>
@@ -453,14 +459,14 @@
         ],
         hl:[
           {l:"\uC218\uC775 \uBAA8\uB378",v:"B2C+B2B+<br>\uD50C\uB7AB\uD3FC \uC218\uC218\uB8CC"},
-          {l:"\uB370\uC774\uD130 \uD574\uC790",v:"Taste Model"},
-          {l:"\uB124\uD2B8\uC6CC\uD06C \uD6A8\uACFC",v:"Lock-in"}
+          {l:"\uB370\uC774\uD130 \uD574\uC790",v:"<strong>Taste Model</strong>"},
+          {l:"\uB124\uD2B8\uC6CC\uD06C \uD6A8\uACFC",v:"<strong>Lock-in</strong>"}
         ]
       },
       roadmap:{
         badge:"TEXT TO UNIVERSE",
         title:"Seed \u2192 Stem \u2192 Flower",
-        sub:"Seed(\uC18C\uC124) \u2192 Stem(\uC2DC\uB098\uB9AC\uC624) \u2192 Flower(\uC601\uC0C1)",
+        sub:"Seed(\uC18C\uC124)\uB97C \uC2EC\uACE0, Stem(\uC2DC\uB098\uB9AC\uC624)\uC73C\uB85C \uD0A4\uC6CC, Flower(\uC601\uC0C1)\uB97C \uD53C\uC6C1\uB2C8\uB2E4.",
         rm:true,
         phases:[
           {l:"Phase 1: Seed",tg:"2026 \uC0C1\uBC18\uAE30",cl:"#2D3E50",d:"\uC6F9\uC18C\uC124 MVP \uCD9C\uC2DC. \uB370\uC774\uD130 \uC218\uC9D1. NEX-Writer(\uD5E5\uC0AC\uACE4 \uB85C\uC9C1 + 50 \uD0DC\uADF8) \uB7F0\uCE6D."},
@@ -479,7 +485,8 @@
           {t:"MOSPO \uD488\uC9C8 \uD3C9\uAC00",dc:"#6B7B4D",d:"50\uCC28\uC6D0 \uD3C9\uAC00 \uB9E4\uD2B8\uB9AD\uC2A4\uB85C \uD50C\uB86F\u00B7\uCE90\uB9AD\uD130\u00B7\uC0C1\uC5C5\uC131 \uB4F1\uC744 \uC810\uC218\uD654\uD569\uB2C8\uB2E4."},
           {t:"\uCDE8\uD5A5 \uBAA8\uB378 (Taste Model)",dc:"#A08930",d:"\uBBF8\uC138 \uC120\uD638 \uB370\uC774\uD130\uB97C \uCD95\uC801\uD574 \uC81C\uC791\uACFC \uCD94\uCC9C\uC5D0 \uBC18\uC601\uD569\uB2C8\uB2E4. \uC791\uAC00/\uB3C5\uC790 \uD398\uB974\uC18C\uB098\uB85C \uC790\uC0B0\uD654\uD569\uB2C8\uB2E4."},
           {t:"Programmable IP",dc:"#C4A84D",d:"\uC628\uCCB4\uC778 \uCD9C\uCC98 \uC99D\uBA85 + \uC2A4\uB9C8\uD2B8 \uCEE8\uD2B8\uB799\uD2B8 \uC815\uC0B0. IP \uAD8C\uB9AC\uB97C \uCF54\uB4DC\uB85C \uAD00\uB9AC\uD569\uB2C8\uB2E4."}
-        ]
+        ],
+        ft:"\uCC3D\uC791\uC740 \uACF5\uD559, \uD765\uD589\uC740 \uC218\uD559, \uC774\uC57C\uAE30\uB294 \uCF54\uB4DC\uC785\uB2C8\uB2E4."
       }
     };
 
@@ -661,50 +668,51 @@
       /* ===== FLYWHEEL ===== */
       if(c.fw){
         h+='<div class="fw">';
-        h+='<svg viewBox="0 0 480 480" aria-label="Creative Flywheel">';
+        h+='<svg viewBox="0 0 560 560" aria-label="Creative Flywheel">';
         h+='<defs>';
         h+='<linearGradient id="fwR" x1="0%" y1="0%" x2="100%" y2="100%">';
         h+='<stop offset="0%" stop-color="#3A5068"/><stop offset="50%" stop-color="#6B7B4D"/><stop offset="100%" stop-color="#D4B85A"/>';
         h+='</linearGradient>';
-        /* Arrow markers — clean chevron style */
-        h+='<marker id="a1" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M1,1 L9,4 L1,7" fill="none" stroke="#5A7C9C" stroke-width="1.5" stroke-linecap="round"/></marker>';
-        h+='<marker id="a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M1,1 L9,4 L1,7" fill="none" stroke="#8B9A62" stroke-width="1.5" stroke-linecap="round"/></marker>';
-        h+='<marker id="a3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M1,1 L9,4 L1,7" fill="none" stroke="#BCA64A" stroke-width="1.5" stroke-linecap="round"/></marker>';
-        h+='<marker id="a4" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M1,1 L9,4 L1,7" fill="none" stroke="#D4B85A" stroke-width="1.5" stroke-linecap="round"/></marker>';
+        h+='<filter id="fwG"><feGaussianBlur stdDeviation="12" result="b"/><feComposite in="SourceGraphic" in2="b"/></filter>';
+        /* Arrow markers — larger, cleaner */
+        h+='<marker id="a1" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto"><path d="M1,1 L12,5 L1,9" fill="none" stroke="#5A7C9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>';
+        h+='<marker id="a2" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto"><path d="M1,1 L12,5 L1,9" fill="none" stroke="#8B9A62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>';
+        h+='<marker id="a3" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto"><path d="M1,1 L12,5 L1,9" fill="none" stroke="#BCA64A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>';
+        h+='<marker id="a4" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto"><path d="M1,1 L12,5 L1,9" fill="none" stroke="#D4B85A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>';
         h+='</defs>';
-        /* Outer ring */
-        h+='<circle cx="240" cy="240" r="198" fill="none" stroke="url(#fwR)" stroke-width="0.5" stroke-opacity="0.15" stroke-dasharray="3,6"/>';
-        /* Arc paths — r=130, well inside label zone */
-        h+='<path d="M240,110 A130,130 0 0,1 370,240" fill="none" stroke="#3A5068" stroke-width="2" stroke-opacity="0.4" marker-end="url(#a1)"/>';
-        h+='<path d="M370,240 A130,130 0 0,1 240,370" fill="none" stroke="#6B7B4D" stroke-width="2" stroke-opacity="0.4" marker-end="url(#a2)"/>';
-        h+='<path d="M240,370 A130,130 0 0,1 110,240" fill="none" stroke="#A08930" stroke-width="2" stroke-opacity="0.4" marker-end="url(#a3)"/>';
-        h+='<path d="M110,240 A130,130 0 0,1 240,110" fill="none" stroke="#D4B85A" stroke-width="2" stroke-opacity="0.4" marker-end="url(#a4)"/>';
-        /* Center hub */
-        h+='<circle cx="240" cy="240" r="50" fill="rgba(212,184,90,0.04)" stroke="rgba(212,184,90,0.2)" stroke-width="1.5"/>';
-        h+='<circle cx="240" cy="240" r="32" fill="rgba(212,184,90,0.07)" stroke="rgba(212,184,90,0.3)" stroke-width="1"/>';
-        h+='<text x="240" y="235" text-anchor="middle" fill="#F0F2F5" font-size="14" font-weight="800">Flywheel</text>';
-        h+='<text x="240" y="252" text-anchor="middle" fill="#D4B85A" font-size="10" font-weight="600" opacity="0.8">Quality Loop</text>';
-        /* Top: SPOE — well above top arc */
-        h+='<rect x="176" y="32" width="128" height="48" rx="12" fill="rgba(58,80,104,0.12)" stroke="rgba(58,80,104,0.35)" stroke-width="1"/>';
-        h+='<text x="240" y="54" text-anchor="middle" fill="#F0F2F5" font-size="15" font-weight="800">SPOE</text>';
-        h+='<text x="240" y="70" text-anchor="middle" fill="#5A7C9C" font-size="10" font-weight="600">\uCC3D\uC791 \uC5D4\uC9C4</text>';
-        /* Right: MOSPO — well right of arc */
-        h+='<rect x="386" y="218" width="92" height="48" rx="12" fill="rgba(107,123,77,0.12)" stroke="rgba(107,123,77,0.35)" stroke-width="1"/>';
-        h+='<text x="432" y="240" text-anchor="middle" fill="#F0F2F5" font-size="14" font-weight="800">MOSPO</text>';
-        h+='<text x="432" y="256" text-anchor="middle" fill="#8B9A62" font-size="10" font-weight="600">\uD488\uC9C8 \uD3C9\uAC00</text>';
+        /* Outer decorative ring */
+        h+='<circle cx="280" cy="280" r="240" fill="none" stroke="url(#fwR)" stroke-width="0.5" stroke-opacity="0.12" stroke-dasharray="4,8"/>';
+        /* Arc paths — r=155, generous gap between arcs and labels */
+        h+='<path d="M280,125 A155,155 0 0,1 435,280" fill="none" stroke="#3A5068" stroke-width="2.5" stroke-opacity="0.45" marker-end="url(#a1)"/>';
+        h+='<path d="M435,280 A155,155 0 0,1 280,435" fill="none" stroke="#6B7B4D" stroke-width="2.5" stroke-opacity="0.45" marker-end="url(#a2)"/>';
+        h+='<path d="M280,435 A155,155 0 0,1 125,280" fill="none" stroke="#A08930" stroke-width="2.5" stroke-opacity="0.45" marker-end="url(#a3)"/>';
+        h+='<path d="M125,280 A155,155 0 0,1 280,125" fill="none" stroke="#D4B85A" stroke-width="2.5" stroke-opacity="0.45" marker-end="url(#a4)"/>';
+        /* Center hub — larger with glow */
+        h+='<circle cx="280" cy="280" r="62" fill="rgba(212,184,90,0.04)" stroke="rgba(212,184,90,0.2)" stroke-width="1.5" filter="url(#fwG)"/>';
+        h+='<circle cx="280" cy="280" r="42" fill="rgba(212,184,90,0.08)" stroke="rgba(212,184,90,0.3)" stroke-width="1"/>';
+        h+='<text x="280" y="274" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">Flywheel</text>';
+        h+='<text x="280" y="296" text-anchor="middle" fill="#D4B85A" font-size="12" font-weight="600" opacity="0.85">Quality Loop</text>';
+        /* Top: SPOE */
+        h+='<rect x="204" y="28" width="152" height="62" rx="14" fill="rgba(58,80,104,0.12)" stroke="rgba(58,80,104,0.35)" stroke-width="1.2"/>';
+        h+='<text x="280" y="56" text-anchor="middle" fill="#F0F2F5" font-size="20" font-weight="800">SPOE</text>';
+        h+='<text x="280" y="76" text-anchor="middle" fill="#5A7C9C" font-size="13" font-weight="600">\uCC3D\uC791 \uC5D4\uC9C4</text>';
+        /* Right: MOSPO */
+        h+='<rect x="452" y="252" width="106" height="62" rx="14" fill="rgba(107,123,77,0.12)" stroke="rgba(107,123,77,0.35)" stroke-width="1.2"/>';
+        h+='<text x="505" y="280" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">MOSPO</text>';
+        h+='<text x="505" y="300" text-anchor="middle" fill="#8B9A62" font-size="12" font-weight="600">\uD488\uC9C8 \uD3C9\uAC00</text>';
         /* Bottom: Taste Model */
-        h+='<rect x="164" y="398" width="152" height="48" rx="12" fill="rgba(160,137,48,0.12)" stroke="rgba(160,137,48,0.35)" stroke-width="1"/>';
-        h+='<text x="240" y="420" text-anchor="middle" fill="#F0F2F5" font-size="14" font-weight="800">Taste Model</text>';
-        h+='<text x="240" y="436" text-anchor="middle" fill="#BCA64A" font-size="10" font-weight="600">\uCDE8\uD5A5 \uBAA8\uB378</text>';
+        h+='<rect x="192" y="468" width="176" height="62" rx="14" fill="rgba(160,137,48,0.12)" stroke="rgba(160,137,48,0.35)" stroke-width="1.2"/>';
+        h+='<text x="280" y="496" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">Taste Model</text>';
+        h+='<text x="280" y="516" text-anchor="middle" fill="#BCA64A" font-size="12" font-weight="600">\uCDE8\uD5A5 \uBAA8\uB378</text>';
         /* Left: Evolve */
-        h+='<rect x="2" y="218" width="92" height="48" rx="12" fill="rgba(196,168,77,0.08)" stroke="rgba(196,168,77,0.3)" stroke-width="1"/>';
-        h+='<text x="48" y="240" text-anchor="middle" fill="#F0F2F5" font-size="14" font-weight="800">Evolve</text>';
-        h+='<text x="48" y="256" text-anchor="middle" fill="#D4B85A" font-size="10" font-weight="600">\uC9C4\uD654 \uD655\uC7A5</text>';
-        /* Junction dots */
-        h+='<circle cx="240" cy="110" r="4" fill="#3A5068" opacity="0.7"/>';
-        h+='<circle cx="370" cy="240" r="4" fill="#6B7B4D" opacity="0.7"/>';
-        h+='<circle cx="240" cy="370" r="4" fill="#A08930" opacity="0.7"/>';
-        h+='<circle cx="110" cy="240" r="4" fill="#D4B85A" opacity="0.7"/>';
+        h+='<rect x="2" y="252" width="106" height="62" rx="14" fill="rgba(196,168,77,0.08)" stroke="rgba(196,168,77,0.3)" stroke-width="1.2"/>';
+        h+='<text x="55" y="280" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">Evolve</text>';
+        h+='<text x="55" y="300" text-anchor="middle" fill="#D4B85A" font-size="12" font-weight="600">\uC9C4\uD654 \uD655\uC7A5</text>';
+        /* Junction dots at arc endpoints */
+        h+='<circle cx="280" cy="125" r="5" fill="#3A5068" opacity="0.6"/>';
+        h+='<circle cx="435" cy="280" r="5" fill="#6B7B4D" opacity="0.6"/>';
+        h+='<circle cx="280" cy="435" r="5" fill="#A08930" opacity="0.6"/>';
+        h+='<circle cx="125" cy="280" r="5" fill="#D4B85A" opacity="0.6"/>';
         h+='</svg></div>';
       }
 
