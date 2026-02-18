@@ -132,7 +132,8 @@
     .mkt-v{font-size:30px;font-weight:900;margin-bottom:4px;letter-spacing:-0.02em;}
     .mkt-l{font-size:16px;font-weight:700;color:var(--fg);}
     .mkt-s{font-size:13px;color:var(--muted);margin-top:3px;letter-spacing:0.02em;}
-    .mkt-footer{text-align:center;font-size:15px;color:var(--muted);margin-bottom:56px;line-height:2;opacity:0.8;max-width:560px;margin-left:auto;margin-right:auto;word-break:keep-all;}
+    .mkt-footer{text-align:center;font-size:15px;color:var(--muted);margin-bottom:56px;line-height:2.1;opacity:0.85;max-width:600px;margin-left:auto;margin-right:auto;word-break:keep-all;}
+    .mkt-hl{font-weight:800;color:var(--accent);font-size:16px;letter-spacing:0.01em;}
 
     /* ===== FOOTER ===== */
     .foot{text-align:center;padding:36px 28px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);opacity:0.5;letter-spacing:0.04em;}
@@ -210,7 +211,7 @@
     .mh-i .l{font-size:14px;color:var(--muted);margin-top:8px;font-weight:500;}
 
     /* Venn */
-    .vw{width:100%;max-width:480px;margin:0 auto 28px;}
+    .vw{width:100%;max-width:560px;margin:0 auto 32px;}
     .vw svg{width:100%;height:auto;}
     .vleg{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:24px;}
     .vleg-i{
@@ -296,8 +297,8 @@
       .mkt-footer{font-size:13px;padding:0 8px;}
       .ci{padding:28px 18px 24px;}
       .mh{grid-template-columns:1fr;}
-      .fw{max-width:340px;}
-      .vw{max-width:340px;}
+      .fw{max-width:360px;}
+      .vw{max-width:380px;}
     }
   </style>
 </head>
@@ -381,7 +382,7 @@
         <div class="mkt-s">Digital Assets</div>
       </div>
     </div>
-    <p class="mkt-footer">세 시장이 융합하는 지점에서, 차세대 IP 파운드리 Open Story AI가 탄생합니다.<br>70억 인구의 상상력을 자산으로. 누구나 &lt;오징어 게임&gt;을 만들 수 있는 세상으로.</p>
+    <p class="mkt-footer"><strong class="mkt-hl">세 시장이 융합하는 지점에서, 차세대 IP 파운드리 Open Story AI가 탄생합니다.</strong><br>70억 인구의 상상력을 자산으로. 누구나 &lt;오징어 게임&gt;을 만들 수 있는 세상으로.</p>
   </main>
 
   <footer class="foot">&copy; 2026 Open Story AI. All rights reserved.</footer>
@@ -443,7 +444,7 @@
       },
       market:{
         badge:"MARKET OPPORTUNITY",
-        title:"3\uB300 \uC735\uD569 \uC2DC\uC7A5\uC758 \uAD50\uCC28\uC810",
+        title:"3\uAC1C \uAC70\uB300 \uC2DC\uC7A5\uC758 \uC735\uD569",
         sub:"\uC0DD\uC131\uD615 AI($66.6B) \u00B7 IP \uB77C\uC774\uC120\uC2F1($38.4B) \u00B7 \uB514\uC9C0\uD138 \uC790\uC0B0($12.3B)\uC758 \uAD50\uCC28\uC810.",
         venn:true
       },
@@ -458,7 +459,7 @@
           {t:"NEX-Analytics (For Business)",dc:"#C4A84D",d:"\uD22C\uC790/\uC81C\uC791\uC0AC\uB97C \uC704\uD55C IP \uAC00\uCE58 \uD3C9\uAC00. \uB370\uC774\uD130 \uAE30\uBC18 \uC758\uC0AC\uACB0\uC815\uC744 \uC9C0\uC6D0."}
         ],
         hl:[
-          {l:"\uC218\uC775 \uBAA8\uB378",v:"B2C+B2B+<br>\uD50C\uB7AB\uD3FC \uC218\uC218\uB8CC"},
+          {l:"\uC218\uC775 \uBAA8\uB378",v:"<strong>B2C+B2B+<br>\uD50C\uB7AB\uD3FC \uC218\uC218\uB8CC</strong>"},
           {l:"\uB370\uC774\uD130 \uD574\uC790",v:"<strong>Taste Model</strong>"},
           {l:"\uB124\uD2B8\uC6CC\uD06C \uD6A8\uACFC",v:"<strong>Lock-in</strong>"}
         ]
@@ -637,26 +638,27 @@
       /* ===== VENN ===== */
       if(c.venn){
         h+='<div class="vw">';
-        h+='<svg viewBox="0 0 480 420" aria-label="Venn Diagram">';
+        h+='<svg viewBox="0 0 560 500" aria-label="Venn Diagram: 3 Market Convergence">';
         h+='<defs>';
-        h+='<filter id="vg" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8"/></filter>';
+        h+='<filter id="vg" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10"/></filter>';
+        h+='<filter id="vtg" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="3"/></filter>';
         h+='</defs>';
-        /* Three circles — generous spacing */
-        h+='<circle cx="192" cy="168" r="124" fill="rgba(212,184,90,0.08)" stroke="#D4B85A" stroke-width="1.5" stroke-opacity="0.4"/>';
-        h+='<circle cx="288" cy="168" r="124" fill="rgba(90,124,156,0.08)" stroke="#5A7C9C" stroke-width="1.5" stroke-opacity="0.4"/>';
-        h+='<circle cx="240" cy="256" r="124" fill="rgba(158,139,64,0.08)" stroke="#9E8B40" stroke-width="1.5" stroke-opacity="0.4"/>';
-        /* Center glow */
-        h+='<circle cx="240" cy="198" r="32" fill="rgba(212,184,90,0.15)" filter="url(#vg)"/>';
-        /* Labels — positioned in each circle exclusive region */
-        h+='<text x="140" y="100" text-anchor="middle" fill="#D4B85A" font-size="22" font-weight="900">$66.6B</text>';
-        h+='<text x="140" y="120" text-anchor="middle" fill="#D4B85A" font-size="12" font-weight="600" opacity="0.8">\uC0DD\uC131\uD615 AI</text>';
-        h+='<text x="340" y="100" text-anchor="middle" fill="#5A7C9C" font-size="22" font-weight="900">$38.4B</text>';
-        h+='<text x="340" y="120" text-anchor="middle" fill="#5A7C9C" font-size="12" font-weight="600" opacity="0.8">IP \uB77C\uC774\uC120\uC2F1</text>';
-        h+='<text x="240" y="356" text-anchor="middle" fill="#9E8B40" font-size="22" font-weight="900">$12.3B</text>';
-        h+='<text x="240" y="376" text-anchor="middle" fill="#9E8B40" font-size="12" font-weight="600" opacity="0.8">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
-        /* Center */
-        h+='<text x="240" y="193" text-anchor="middle" fill="#F0F2F5" font-size="15" font-weight="900">Open Story</text>';
-        h+='<text x="240" y="211" text-anchor="middle" fill="#D4B85A" font-size="11" font-weight="700" opacity="0.85">Vertical Solution</text>';
+        /* Three circles — larger radius 148, well-separated */
+        h+='<circle cx="218" cy="195" r="148" fill="rgba(212,184,90,0.07)" stroke="#D4B85A" stroke-width="1.8" stroke-opacity="0.35"/>';
+        h+='<circle cx="342" cy="195" r="148" fill="rgba(90,124,156,0.07)" stroke="#5A7C9C" stroke-width="1.8" stroke-opacity="0.35"/>';
+        h+='<circle cx="280" cy="305" r="148" fill="rgba(158,139,64,0.07)" stroke="#9E8B40" stroke-width="1.8" stroke-opacity="0.35"/>';
+        /* Center intersection glow */
+        h+='<circle cx="280" cy="232" r="42" fill="rgba(212,184,90,0.14)" filter="url(#vg)"/>';
+        /* Labels — large, readable, firmly in each circle exclusive lobe */
+        h+='<text x="155" y="110" text-anchor="middle" fill="#D4B85A" font-size="28" font-weight="900">$66.6B</text>';
+        h+='<text x="155" y="136" text-anchor="middle" fill="#D4B85A" font-size="15" font-weight="700" opacity="0.85">\uC0DD\uC131\uD615 AI</text>';
+        h+='<text x="405" y="110" text-anchor="middle" fill="#5A7C9C" font-size="28" font-weight="900">$38.4B</text>';
+        h+='<text x="405" y="136" text-anchor="middle" fill="#5A7C9C" font-size="15" font-weight="700" opacity="0.85">IP \uB77C\uC774\uC120\uC2F1</text>';
+        h+='<text x="280" y="425" text-anchor="middle" fill="#9E8B40" font-size="28" font-weight="900">$12.3B</text>';
+        h+='<text x="280" y="451" text-anchor="middle" fill="#9E8B40" font-size="15" font-weight="700" opacity="0.85">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
+        /* Center label — prominent */
+        h+='<text x="280" y="225" text-anchor="middle" fill="#F0F2F5" font-size="19" font-weight="900">Open Story</text>';
+        h+='<text x="280" y="248" text-anchor="middle" fill="#D4B85A" font-size="13" font-weight="700" opacity="0.9">Vertical Solution</text>';
         h+='</svg></div>';
         h+='<div class="vleg">';
         h+='<div class="vleg-i"><div class="vd" style="background:#D4B85A"></div>\uC0DD\uC131\uD615 AI</div>';
