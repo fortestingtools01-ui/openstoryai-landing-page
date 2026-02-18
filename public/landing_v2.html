@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0B1621"/>
   <title>Open Story AI</title>
   <style>
-    /* ===== SYSTEM FONT (no external deps) ===== */
+    /* ===== SYSTEM FONT ===== */
     @font-face {
       font-family:'SysKR';
       src:local('Apple SD Gothic Neo'),local('Malgun Gothic'),local('Noto Sans KR'),local('Segoe UI'),local('Helvetica Neue'),local('Arial');
@@ -26,7 +26,6 @@
       --navy:#2D3E50;
       --navy-hl:#4A6580;
       --navy-light:#3A5068;
-      --navy-light-hl:#5A7088;
       --olive:#6B7B4D;
       --olive-hl:#8B9A62;
       --gold-dark:#7E6B30;
@@ -46,6 +45,7 @@
       min-height:100dvh;display:flex;flex-direction:column;
       -webkit-font-smoothing:antialiased;
       font-size:18px;line-height:1.7;overflow-x:hidden;
+      word-break:keep-all;line-break:strict;
     }
 
     /* ===== AMBIENT ===== */
@@ -154,17 +154,28 @@
     .cm::-webkit-scrollbar-track{background:transparent;}
     .cm::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px;}
 
-    /* Card content — large fonts for elderly readability */
+    /* ===== CARD CONTENT ===== */
     .mb{
       display:inline-block;border:1px solid rgba(196,168,77,0.3);background:rgba(196,168,77,0.08);
       padding:8px 20px;border-radius:100px;font-size:15px;font-weight:700;
       letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:22px;
     }
     .mt{font-size:clamp(30px,4.5vw,44px);font-weight:900;line-height:1.25;margin-bottom:18px;color:var(--fg);}
+    /* Overview title stays on one line */
+    .ci[data-page="overview"] .mt{white-space:nowrap;}
+    @media(max-width:520px){
+      .ci{padding:40px 28px 36px;}
+      .ci[data-page="overview"] .mt{font-size:clamp(20px,5vw,40px);}
+    }
+    @media(max-width:360px){
+      .ci{padding:34px 18px 30px;}
+      .ci[data-page="overview"] .mt{font-size:clamp(18px,5.8vw,34px);}
+    }
+
     .ms{font-size:22px;color:var(--muted);line-height:1.75;margin-bottom:34px;}
     .mbd{font-size:20px;color:var(--muted);line-height:1.8;margin-bottom:34px;}
 
-    /* Card items — enlarged for accessibility */
+    /* Card items */
     .mi-wrap{display:flex;flex-direction:column;gap:18px;margin-bottom:34px;}
     .mi{border-radius:var(--radius);border:1px solid var(--border);background:rgba(23,40,54,0.4);padding:28px 30px;}
     .mi h3{font-size:22px;font-weight:700;color:var(--fg);margin-bottom:10px;display:flex;align-items:center;gap:12px;}
@@ -176,13 +187,13 @@
       font-size:18px;color:var(--accent);line-height:1.7;
     }
 
-    /* Highlights — enlarged */
+    /* Highlights */
     .mh{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:34px;}
     .mh-i{border-radius:var(--radius);border:1px solid var(--border);background:rgba(23,40,54,0.3);padding:24px;text-align:center;}
     .mh-i .v{font-size:32px;font-weight:900;color:var(--accent);}
     .mh-i .l{font-size:17px;color:var(--muted);margin-top:10px;}
 
-    /* Venn — enlarged for readability */
+    /* Venn */
     .vw{width:100%;max-width:520px;margin:0 auto 32px;}
     .vw svg{width:100%;height:auto;}
     .vleg{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:24px;}
@@ -214,11 +225,11 @@
     }
     .tl-p p{font-size:19px;color:var(--muted);line-height:1.8;}
 
-    /* Flywheel — larger */
+    /* Flywheel */
     .fw{width:100%;max-width:520px;margin:0 auto 34px;}
     .fw svg{width:100%;height:auto;}
 
-    /* BM grid — enlarged */
+    /* BM grid */
     .bmg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;}
     .bmc{
       border-radius:var(--radius);border:1px solid var(--border);background:rgba(23,40,54,0.4);
@@ -229,7 +240,7 @@
     .bmc .rl{font-size:14px;font-weight:700;letter-spacing:0.06em;color:var(--accent);margin-bottom:12px;display:block;}
     .bmc p{font-size:17px;color:var(--muted);line-height:1.7;}
 
-    /* Modal footer — enlarged */
+    /* Modal footer */
     .mf{font-size:19px;color:var(--muted);border-top:1px solid var(--border);padding-top:24px;line-height:1.8;margin-top:14px;}
 
     /* ===== RESPONSIVE ===== */
@@ -275,7 +286,6 @@
   <!-- HEADER -->
   <header class="hdr">
     <div class="logo-w">
-      <!-- Logo mini-graph -->
       <svg viewBox="0 0 52 38" width="44" height="33" aria-hidden="true">
         <defs>
           <radialGradient id="m1" cx="35%" cy="30%"><stop offset="0%" stop-color="#4A6580"/><stop offset="100%" stop-color="#2D3E50"/></radialGradient>
@@ -322,7 +332,7 @@
     <section class="hero">
       <span class="badge">Creative Industrialization OS</span>
       <h1>창의성을 산업으로, <span class="gd">스토리를 자산으로.</span></h1>
-      <p class="sub">AI 창작 엔진과 블록체인 IP 인프라의 융합.<br>아래 노드를 클릭하여 비전을 탐색하세요.</p>
+      <p class="sub">AI 창작 엔진 + 블록체인 IP 인프라.<br>노드를 클릭해 내용을 확인하세요.</p>
     </section>
 
     <!-- KNOWLEDGE GRAPH -->
@@ -364,23 +374,19 @@
 
   <script>
     /* ===== DATA ===== */
-    /* Node positions precisely match logo_graph.png constellation:
-       Node 0 (bottom-left navy) -> Node 1 (top-left navy) -> Node 2 (center olive) ->
-       Node 3 (mid-right gold-mid) -> Node 4 (bottom-right gold-bright) -> Node 5 (top-right gold) */
     var N=[
-      {id:"overview",  kr:"개요",       en:"Overview",  x:130,y:240,c:"#2D3E50",h:"#4A6580"},
-      {id:"problem",   kr:"문제",       en:"Problem",   x:260,y:80, c:"#3A5068",h:"#5A7088"},
-      {id:"technology",kr:"기술",       en:"Technology", x:370,y:175,c:"#6B7B4D",h:"#8B9A62"},
-      {id:"market",    kr:"시장",       en:"Market",     x:520,y:100,c:"#A08930",h:"#BCA64A"},
-      {id:"roadmap",   kr:"로드맵",     en:"Roadmap",    x:540,y:240,c:"#B09E40",h:"#D4BE60"},
-      {id:"bm",        kr:"비즈니스 모델",en:"BM",        x:680,y:45, c:"#C4A84D",h:"#E0CC6A"}
+      {id:"overview",  kr:"개요",         en:"Overview",   x:130,y:240,c:"#2D3E50",h:"#4A6580"},
+      {id:"problem",   kr:"문제",         en:"Problem",    x:260,y:80, c:"#3A5068",h:"#5A7088"},
+      {id:"technology",kr:"기술",         en:"Technology",  x:370,y:175,c:"#6B7B4D",h:"#8B9A62"},
+      {id:"market",    kr:"시장",         en:"Market",      x:520,y:100,c:"#A08930",h:"#BCA64A"},
+      {id:"roadmap",   kr:"로드맵",       en:"Roadmap",     x:540,y:240,c:"#B09E40",h:"#D4BE60"},
+      {id:"bm",        kr:"비즈니스 모델", en:"BM",          x:680,y:45, c:"#C4A84D",h:"#E0CC6A"}
     ];
 
-    /* Edge connectivity: matching the exact logo_graph.png structure */
     var E=[
-      [0,1],[0,2],[1,2], /* left triangle (navy cluster) */
-      [1,3],[2,3],[2,4], /* center connections */
-      [3,4],[3,5],[4,5]  /* right triangle (gold cluster) */
+      [0,1],[0,2],[1,2],
+      [1,3],[2,3],[2,4],
+      [3,4],[3,5],[4,5]
     ];
 
     /* ===== CARD CONTENT ===== */
@@ -388,60 +394,82 @@
       overview:{
         badge:"CREATIVE INDUSTRIALIZATION OS",
         title:"창의성을 산업으로, 스토리를 자산으로",
-        sub:"웹소설 생산부터 영상/게임 확장까지<br>스토리 IP의 전 주기를 통합 관리하는 운영체제",
-        body:"스토리 IP의 생산, 검증, 확장, 유통을 하나의 플랫폼에서 관리합니다.<br>콘텐츠 산업의 불확실성을 제거하고 공학과 자산의 영역으로 전환합니다.",
-        hl:[{l:"핵심 가치",v:"IP Lifecycle<br>OS"},{l:"차별화",v:"AI +<br>Blockchain"},{l:"대상 시장",v:"$100B+"}]
+        sub:"웹소설부터 영상\u00B7게임까지.<br>스토리 IP 전 주기를 한 OS로 관리합니다.",
+        body:"생산 \u2192 검증 \u2192 확장 \u2192 유통을 한 플랫폼에 묶습니다.<br>불확실성을 줄이고, 스토리를 데이터와 자산으로 전환합니다.",
+        hl:[
+          {l:"핵심 가치",v:"IP Lifecycle<br>OS"},
+          {l:"차별화",v:"AI +<br>Blockchain"},
+          {l:"대상 시장",v:"$100B+"}
+        ]
       },
       problem:{
         badge:"DUAL FRICTION DILEMMA",
         title:"콘텐츠 산업의 이중 마찰",
-        sub:"폭발하는 IP 수요 이면에 구조적 비효율이 성장을 가로막고 있습니다.",
+        sub:"IP 수요는 커지지만, 구조적 마찰이 성장 속도를 늦춥니다.",
         items:[
-          {t:"마찰 1: 창작의 병목",dc:"#3A5068",d:"소수 작가의 개인 역량에 절대 의존하는 구조. 품질 편차가 크고 흥행 예측이 불가능하여 투자 리스크가 높습니다.",sol:"해결: 창의적 플라이휠 도입 &rarr; 서사의 공학적 엔지니어링, 고품질 IP의 시스템적 양산"},
-          {t:"마찰 2: 유통의 마찰",dc:"#A08930",d:"종이 계약 기반의 복잡한 권리 관계, 불투명한 정산, 2차 판권 협상 지연. OSMU 확장의 높은 진입 장벽.",sol:"프로그래머블 IP &rarr; 블록체인 기반 권리 및 정산 자동화"}
+          {
+            t:"마찰 1: 창작의 병목",
+            dc:"#3A5068",
+            d:"창작이 개인 역량에 묶여 있습니다. 품질 편차가 크고, 흥행 예측이 어렵습니다.",
+            sol:"해결: 창의적 플라이휠 도입 \u2192 서사의 공학적 엔지니어링, 고품질 IP의 시스템적 양산"
+          },
+          {
+            t:"마찰 2: 유통의 마찰",
+            dc:"#A08930",
+            d:"권리 관계가 복잡합니다. 정산이 불투명하고, 2차 판권 협상이 느립니다.",
+            sol:"프로그래머블 IP \u2192 블록체인 기반 권리 및 정산 자동화"
+          }
         ],
-        hl:[{l:"AI 협업 시 생산성",v:"3~5x"},{l:"스마트 컨트랙트 마찰",v:"Zero"},{l:"GEPA 알고리즘 효율",v:"35x"}]
+        hl:[
+          {l:"AI 협업 생산성",v:"3~5x"},
+          {l:"정산/권리 마찰",v:"Zero"},
+          {l:"GEPA 효율",v:"35x"}
+        ]
       },
       market:{
         badge:"MARKET OPPORTUNITY",
         title:"3대 융합 시장의 교차점",
-        sub:"생성형 AI($66.6B) + IP 라이선싱($38.4B) + 디지털 자산($12.3B)<br>세 시장이 교차하는 Vertical 솔루션",
+        sub:"생성형 AI($66.6B) \u00B7 IP 라이선싱($38.4B) \u00B7 디지털 자산($12.3B)의 교차점.",
         venn:true
       },
       bm:{
         badge:"BUSINESS MODEL",
         title:"3면(3-Sided) 플랫폼 생태계",
-        sub:"Creator / Consumer / Business를 연결하는 생태계 전략",
+        sub:"창작자 \u00B7 독자 \u00B7 비즈니스를 한 플랫폼으로 연결합니다.",
         bm:true,
         items:[
-          {t:"NEX-Writer (For Creators)",dc:"#3A5068",d:"1인 IP 기업가 전용 통합 관제 센터. 웹소설 에디터에서 시나리오 빌더, AI 영상 스튜디오로 진화."},
-          {t:"NEX-Reader (For Consumers)",dc:"#6B7B4D",d:"인터랙티브 팬덤 플랫폼. 독자 분기 선택 및 이탈 데이터를 흥행 예측 모델에 실시간 환류."},
-          {t:"NEX-Analytics (For Business)",dc:"#C4A84D",d:"투자사/제작사 전용 IP 가치 평가 솔루션. 데이터 기반 의사결정 지원."}
+          {t:"NEX-Writer (For Creators)",dc:"#3A5068",d:"1인 IP 기업가용 제작 OS. 웹소설 에디터 \u2192 시나리오 빌더 \u2192 AI 영상 스튜디오로 확장."},
+          {t:"NEX-Reader (For Consumers)",dc:"#6B7B4D",d:"인터랙티브 팬덤 플랫폼. 선택/이탈 데이터를 흥행 예측에 실시간 반영."},
+          {t:"NEX-Analytics (For Business)",dc:"#C4A84D",d:"투자/제작사를 위한 IP 가치 평가. 데이터 기반 의사결정을 지원."}
         ],
-        hl:[{l:"수익 모델",v:"SaaS + IP 수익배분"},{l:"데이터 해자",v:"Taste Model"},{l:"3면 네트워크 효과",v:"Lock-in"}]
+        hl:[
+          {l:"수익 모델",v:"SaaS + IP 수익배분"},
+          {l:"데이터 해자",v:"Taste Model"},
+          {l:"네트워크 효과",v:"Lock-in"}
+        ]
       },
       roadmap:{
         badge:"TEXT TO UNIVERSE",
-        title:"Seed > Stem > Flower",
-        sub:"Seed(소설) &rarr; Stem(시나리오) &rarr; Flower(영상)",
+        title:"Seed \u2192 Stem \u2192 Flower",
+        sub:"Seed(소설) \u2192 Stem(시나리오) \u2192 Flower(영상)",
         rm:true,
         phases:[
-          {l:"Phase 1: Seed",tg:"2026 상반기",cl:"#2D3E50",d:"웹소설 MVP 및 데이터 확보. 헥사곤 로직 + 50개 태그 라이브러리 탑�� NEX-Writer 런칭."},
-          {l:"Phase 2: Stem",tg:"2026 하반기",cl:"#6B7B4D",d:"검증된 소설 IP를 웹툰/드라마 대본으로 자동 변환. NEX-Analytics 솔루션 판매. 자체 SLM 모델 확보."},
-          {l:"Phase 3: Flower",tg:"2027+",cl:"#C4A84D",d:"멀티모달 AI 연동 영상/이미지/게임 산출. Programmable IP 마켓플레이스 ��픈."}
+          {l:"Phase 1: Seed",tg:"2026 상반기",cl:"#2D3E50",d:"웹소설 MVP 출시. 데이터 수집. NEX-Writer(헥사곤 로직 + 50 태그) 런칭."},
+          {l:"Phase 2: Stem",tg:"2026 하반기",cl:"#6B7B4D",d:"검증된 소설을 웹툰/드라마 대본으로 변환. NEX-Analytics 판매. 자체 SLM 확보."},
+          {l:"Phase 3: Flower",tg:"2027+",cl:"#C4A84D",d:"멀티모달 AI로 영상\u00B7이미지\u00B7게임 산출. Programmable IP 마켓 오픈."}
         ],
-        ft:"웹소설은 거대 미디어 우주의 설계도(Blueprint)이자 시작점입니다."
+        ft:"웹소설은 미디어 우주의 설계도이자 출발점입니다."
       },
       technology:{
         badge:"THE CORE ENGINE",
-        title:"창의적 플라이휠 & 4대 기술 스택",
-        sub:"SPOE(생성) &harr; MOSPO(평가) 순환 기반 품질 고도화 엔진",
+        title:"창의적 플라이휠 & 기술 스택",
+        sub:"생성(SPOE) \u2194 평가(MOSPO)를 반복해 품질을 끌어올립니다.",
         fw:true,
         items:[
-          {t:"SPOE 창작 엔진",dc:"#3A5068",d:"GEPA(Genetic-Pareto) 알고리즘 기반 진화적 프롬프트 최적화. 강화학습 대비 35배 적은 시도로 일관된 고품질 서사를 산출합니다."},
-          {t:"MOSPO 품질 평가",dc:"#6B7B4D",d:"50차원 평가 매트릭스(플롯 밀도, 캐릭터 입체성, 상업성 등) 기반 나노 단위 평가."},
-          {t:"취향 모델 (Taste Model)",dc:"#A08930",d:"유저의 미세 선호 데이터 집합체. 작가별/독���별 AI 페르소나로 자산화. 경쟁사 복제 ��가 데이터 해자."},
-          {t:"Programmable IP",dc:"#C4A84D",d:"블록체인 기반 온체인 출처 증명과 스마트 컨트랙트 자동 정산. IP 권리를 코드화하여 투명한 로열티를 보장합니다."}
+          {t:"SPOE 창작 엔진",dc:"#3A5068",d:"GEPA(Genetic-Pareto) 기반 프롬프트 최적화. 강화학습 대비 시도 수를 35배 줄여, 일관된 서사를 생성합니다."},
+          {t:"MOSPO 품질 평가",dc:"#6B7B4D",d:"50차원 평가 매트릭스로 플롯\u00B7캐릭터\u00B7상업성 등을 점수화합니다."},
+          {t:"취향 모델 (Taste Model)",dc:"#A08930",d:"미세 선호 데이터를 축적해 제작과 추천에 반영합니다. 작가/독자 페르소나로 자산화합니다."},
+          {t:"Programmable IP",dc:"#C4A84D",d:"온체인 출처 증명 + 스마트 컨트랙트 정산. IP 권리를 코드로 관리합니다."}
         ]
       }
     };
@@ -592,35 +620,35 @@
     function showC(id){
       var c=CT[id];if(!c)return;
       var h='<button class="cc" onclick="closeC()" aria-label="Close">&times;</button>';
-      h+='<div class="ci">';
+      h+='<div class="ci" data-page="'+id+'">';
       h+='<span class="mb">'+c.badge+'</span>';
       h+='<h2 class="mt">'+c.title+'</h2>';
       h+='<p class="ms">'+c.sub+'</p>';
       if(c.body)h+='<p class="mbd">'+c.body+'</p>';
 
-      /* Venn — simple, high-contrast, large text for elderly readability */
+      /* ===== VENN DIAGRAM ===== */
       if(c.venn){
         h+='<div class="vw">';
         h+='<svg viewBox="0 0 500 440" aria-label="Venn Diagram: 3 Market Intersection">';
         h+='<defs>';
         h+='<filter id="vglow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>';
         h+='</defs>';
-        /* Three circles */
+        /* Three circles — positioned so labels sit in non-overlapping lobes */
         h+='<circle cx="200" cy="175" r="130" fill="rgba(196,168,77,0.10)" stroke="#C4A84D" stroke-width="2.5" stroke-opacity="0.6"/>';
         h+='<circle cx="300" cy="175" r="130" fill="rgba(90,124,156,0.10)" stroke="#5A7C9C" stroke-width="2.5" stroke-opacity="0.6"/>';
-        h+='<circle cx="250" cy="265" r="130" fill="rgba(158,139,64,0.10)" stroke="#9E8B40" stroke-width="2.5" stroke-opacity="0.6"/>';
+        h+='<circle cx="250" cy="270" r="130" fill="rgba(158,139,64,0.10)" stroke="#9E8B40" stroke-width="2.5" stroke-opacity="0.6"/>';
         /* Center intersection glow */
-        h+='<circle cx="250" cy="205" r="38" fill="rgba(196,168,77,0.18)" filter="url(#vglow)"/>';
-        /* Labels — positioned in non-overlapping regions of each circle */
-        h+='<text x="148" y="108" text-anchor="middle" fill="#C4A84D" font-size="24" font-weight="900">$66.6B</text>';
-        h+='<text x="148" y="132" text-anchor="middle" fill="#C4A84D" font-size="15" font-weight="600" opacity="0.9">\uC0DD\uC131\uD615 AI</text>';
-        h+='<text x="352" y="108" text-anchor="middle" fill="#5A7C9C" font-size="24" font-weight="900">$38.4B</text>';
-        h+='<text x="352" y="132" text-anchor="middle" fill="#5A7C9C" font-size="15" font-weight="600" opacity="0.9">IP \uB77C\uC774\uC120\uC2F1</text>';
-        h+='<text x="250" y="365" text-anchor="middle" fill="#9E8B40" font-size="24" font-weight="900">$12.3B</text>';
-        h+='<text x="250" y="389" text-anchor="middle" fill="#9E8B40" font-size="15" font-weight="600" opacity="0.9">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
+        h+='<circle cx="250" cy="208" r="38" fill="rgba(196,168,77,0.18)" filter="url(#vglow)"/>';
+        /* Labels — each inside the exclusive (non-overlapping) region of its circle */
+        h+='<text x="145" y="108" text-anchor="middle" fill="#C4A84D" font-size="24" font-weight="900">$66.6B</text>';
+        h+='<text x="145" y="130" text-anchor="middle" fill="#C4A84D" font-size="14" font-weight="600" opacity="0.9">\uC0DD\uC131\uD615 AI</text>';
+        h+='<text x="355" y="108" text-anchor="middle" fill="#5A7C9C" font-size="24" font-weight="900">$38.4B</text>';
+        h+='<text x="355" y="130" text-anchor="middle" fill="#5A7C9C" font-size="14" font-weight="600" opacity="0.9">IP \uB77C\uC774\uC120\uC2F1</text>';
+        h+='<text x="250" y="372" text-anchor="middle" fill="#9E8B40" font-size="24" font-weight="900">$12.3B</text>';
+        h+='<text x="250" y="394" text-anchor="middle" fill="#9E8B40" font-size="14" font-weight="600" opacity="0.9">\uB514\uC9C0\uD138 \uC790\uC0B0</text>';
         /* Center label */
-        h+='<text x="250" y="200" text-anchor="middle" fill="#E8ECF1" font-size="17" font-weight="900">Open Story</text>';
-        h+='<text x="250" y="220" text-anchor="middle" fill="#C4A84D" font-size="13" font-weight="700" opacity="0.9">Vertical Solution</text>';
+        h+='<text x="250" y="202" text-anchor="middle" fill="#E8ECF1" font-size="17" font-weight="900">Open Story</text>';
+        h+='<text x="250" y="222" text-anchor="middle" fill="#C4A84D" font-size="13" font-weight="700" opacity="0.9">Vertical Solution</text>';
         h+='</svg></div>';
         h+='<div class="vleg">';
         h+='<div class="vleg-i"><div class="vd" style="background:#C4A84D"></div>\uC0DD\uC131\uD615 AI</div>';
@@ -629,7 +657,7 @@
         h+='</div>';
       }
 
-      /* Flywheel — sophisticated, intuitive, modern design */
+      /* ===== FLYWHEEL ===== */
       if(c.fw){
         h+='<div class="fw">';
         h+='<svg viewBox="0 0 520 520" aria-label="Creative Flywheel: SPOE, MOSPO, Taste Model, Evolve">';
@@ -641,48 +669,49 @@
         h+='<stop offset="100%" stop-color="#C4A84D"/>';
         h+='</linearGradient>';
         h+='<filter id="fwGlow"><feGaussianBlur stdDeviation="8" result="blur"/><feComposite in="SourceGraphic" in2="blur"/></filter>';
+        /* Arrow markers — sized for visibility, offset so they don't overlap labels */
         h+='<marker id="aw1" markerWidth="12" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0,0 L12,4.5 L0,9" fill="none" stroke="#5A7C9C" stroke-width="2"/></marker>';
         h+='<marker id="aw2" markerWidth="12" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0,0 L12,4.5 L0,9" fill="none" stroke="#8B9A62" stroke-width="2"/></marker>';
         h+='<marker id="aw3" markerWidth="12" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0,0 L12,4.5 L0,9" fill="none" stroke="#BCA64A" stroke-width="2"/></marker>';
         h+='<marker id="aw4" markerWidth="12" markerHeight="9" refX="10" refY="4.5" orient="auto"><path d="M0,0 L12,4.5 L0,9" fill="none" stroke="#C4A84D" stroke-width="2"/></marker>';
         h+='</defs>';
         /* Outer decorative ring */
-        h+='<circle cx="260" cy="260" r="210" fill="none" stroke="url(#fwRing)" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="4,8"/>';
-        /* Main orbit arcs with arrows — radius 150 keeps arcs away from labels */
-        h+='<path d="M260,110 A150,150 0 0,1 410,260" fill="none" stroke="#3A5068" stroke-width="3" stroke-opacity="0.55" marker-end="url(#aw1)"/>';
-        h+='<path d="M410,260 A150,150 0 0,1 260,410" fill="none" stroke="#6B7B4D" stroke-width="3" stroke-opacity="0.55" marker-end="url(#aw2)"/>';
-        h+='<path d="M260,410 A150,150 0 0,1 110,260" fill="none" stroke="#A08930" stroke-width="3" stroke-opacity="0.55" marker-end="url(#aw3)"/>';
-        h+='<path d="M110,260 A150,150 0 0,1 260,110" fill="none" stroke="#C4A84D" stroke-width="3" stroke-opacity="0.55" marker-end="url(#aw4)"/>';
+        h+='<circle cx="260" cy="260" r="215" fill="none" stroke="url(#fwRing)" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="4,8"/>';
+        /* Orbit arcs — r=148 keeps arcs well inside the label zone */
+        h+='<path d="M260,112 A148,148 0 0,1 408,260" fill="none" stroke="#3A5068" stroke-width="2.5" stroke-opacity="0.5" marker-end="url(#aw1)"/>';
+        h+='<path d="M408,260 A148,148 0 0,1 260,408" fill="none" stroke="#6B7B4D" stroke-width="2.5" stroke-opacity="0.5" marker-end="url(#aw2)"/>';
+        h+='<path d="M260,408 A148,148 0 0,1 112,260" fill="none" stroke="#A08930" stroke-width="2.5" stroke-opacity="0.5" marker-end="url(#aw3)"/>';
+        h+='<path d="M112,260 A148,148 0 0,1 260,112" fill="none" stroke="#C4A84D" stroke-width="2.5" stroke-opacity="0.5" marker-end="url(#aw4)"/>';
         /* Center hub */
         h+='<circle cx="260" cy="260" r="56" fill="rgba(196,168,77,0.06)" stroke="#C4A84D" stroke-width="2" stroke-opacity="0.4"/>';
         h+='<circle cx="260" cy="260" r="36" fill="rgba(196,168,77,0.10)" stroke="#C4A84D" stroke-width="1.5" stroke-opacity="0.6"/>';
         h+='<text x="260" y="254" text-anchor="middle" fill="#E8ECF1" font-size="16" font-weight="900">Flywheel</text>';
-        h+='<text x="260" y="274" text-anchor="middle" fill="#C4A84D" font-size="12" font-weight="600" opacity="0.9">Quality Loop</text>';
-        /* Top: SPOE — placed above arc */
-        h+='<rect x="182" y="38" width="156" height="56" rx="12" fill="rgba(58,80,104,0.15)" stroke="#3A5068" stroke-width="1.8"/>';
-        h+='<text x="260" y="62" text-anchor="middle" fill="#E8ECF1" font-size="18" font-weight="800">SPOE</text>';
-        h+='<text x="260" y="80" text-anchor="middle" fill="#5A7C9C" font-size="12" font-weight="600">\uCC3D\uC791 \uC5D4\uC9C4</text>';
-        /* Right: MOSPO — placed right of arc */
-        h+='<rect x="424" y="232" width="94" height="56" rx="12" fill="rgba(107,123,77,0.15)" stroke="#6B7B4D" stroke-width="1.8"/>';
-        h+='<text x="471" y="256" text-anchor="middle" fill="#E8ECF1" font-size="16" font-weight="800">MOSPO</text>';
-        h+='<text x="471" y="274" text-anchor="middle" fill="#8B9A62" font-size="11" font-weight="600">\uD488\uC9C8 \uD3C9\uAC00</text>';
-        /* Bottom: Taste Model — placed below arc */
-        h+='<rect x="170" y="426" width="180" height="56" rx="12" fill="rgba(160,137,48,0.15)" stroke="#A08930" stroke-width="1.8"/>';
-        h+='<text x="260" y="450" text-anchor="middle" fill="#E8ECF1" font-size="16" font-weight="800">Taste Model</text>';
-        h+='<text x="260" y="468" text-anchor="middle" fill="#BCA64A" font-size="12" font-weight="600">\uCDE8\uD5A5 \uBAA8\uB378</text>';
-        /* Left: Evolve — placed left of arc */
-        h+='<rect x="2" y="232" width="94" height="56" rx="12" fill="rgba(196,168,77,0.12)" stroke="#C4A84D" stroke-width="1.8"/>';
-        h+='<text x="49" y="256" text-anchor="middle" fill="#E8ECF1" font-size="16" font-weight="800">Evolve</text>';
-        h+='<text x="49" y="274" text-anchor="middle" fill="#C4A84D" font-size="11" font-weight="600">\uC9C4\uD654 \uD655\uC7A5</text>';
-        /* Junction dots */
-        h+='<circle cx="260" cy="110" r="5" fill="#3A5068"/>';
-        h+='<circle cx="410" cy="260" r="5" fill="#6B7B4D"/>';
-        h+='<circle cx="260" cy="410" r="5" fill="#A08930"/>';
-        h+='<circle cx="110" cy="260" r="5" fill="#C4A84D"/>';
+        h+='<text x="260" y="274" text-anchor="middle" fill="#C4A84D" font-size="11" font-weight="600" opacity="0.9">Quality Loop</text>';
+        /* Top: SPOE */
+        h+='<rect x="185" y="34" width="150" height="54" rx="12" fill="rgba(58,80,104,0.15)" stroke="#3A5068" stroke-width="1.8"/>';
+        h+='<text x="260" y="58" text-anchor="middle" fill="#E8ECF1" font-size="17" font-weight="800">SPOE</text>';
+        h+='<text x="260" y="76" text-anchor="middle" fill="#5A7C9C" font-size="12" font-weight="600">\uCC3D\uC791 \uC5D4\uC9C4</text>';
+        /* Right: MOSPO — wide enough for text */
+        h+='<rect x="422" y="233" width="96" height="54" rx="12" fill="rgba(107,123,77,0.15)" stroke="#6B7B4D" stroke-width="1.8"/>';
+        h+='<text x="470" y="257" text-anchor="middle" fill="#E8ECF1" font-size="16" font-weight="800">MOSPO</text>';
+        h+='<text x="470" y="275" text-anchor="middle" fill="#8B9A62" font-size="11" font-weight="600">\uD488\uC9C8 \uD3C9\uAC00</text>';
+        /* Bottom: Taste Model */
+        h+='<rect x="170" y="432" width="180" height="54" rx="12" fill="rgba(160,137,48,0.15)" stroke="#A08930" stroke-width="1.8"/>';
+        h+='<text x="260" y="456" text-anchor="middle" fill="#E8ECF1" font-size="16" font-weight="800">Taste Model</text>';
+        h+='<text x="260" y="474" text-anchor="middle" fill="#BCA64A" font-size="12" font-weight="600">\uCDE8\uD5A5 \uBAA8\uB378</text>';
+        /* Left: Evolve — wide enough for text */
+        h+='<rect x="2" y="233" width="96" height="54" rx="12" fill="rgba(196,168,77,0.12)" stroke="#C4A84D" stroke-width="1.8"/>';
+        h+='<text x="50" y="257" text-anchor="middle" fill="#E8ECF1" font-size="16" font-weight="800">Evolve</text>';
+        h+='<text x="50" y="275" text-anchor="middle" fill="#C4A84D" font-size="11" font-weight="600">\uC9C4\uD654 \uD655\uC7A5</text>';
+        /* Junction dots at arc endpoints */
+        h+='<circle cx="260" cy="112" r="5" fill="#3A5068"/>';
+        h+='<circle cx="408" cy="260" r="5" fill="#6B7B4D"/>';
+        h+='<circle cx="260" cy="408" r="5" fill="#A08930"/>';
+        h+='<circle cx="112" cy="260" r="5" fill="#C4A84D"/>';
         h+='</svg></div>';
       }
 
-      /* Roadmap */
+      /* ===== ROADMAP TIMELINE ===== */
       if(c.rm&&c.phases){
         h+='<div class="tl">';
         c.phases.forEach(function(p){
@@ -694,7 +723,7 @@
         h+='</div>';
       }
 
-      /* Items */
+      /* ===== ITEMS ===== */
       if(c.items){
         h+='<div class="mi-wrap">';
         c.items.forEach(function(it){
@@ -707,14 +736,14 @@
         h+='</div>';
       }
 
-      /* Highlights */
+      /* ===== HIGHLIGHTS ===== */
       if(c.hl){
         h+='<div class="mh">';
         c.hl.forEach(function(x){h+='<div class="mh-i"><div class="v">'+x.v+'</div><div class="l">'+x.l+'</div></div>';});
         h+='</div>';
       }
 
-      /* Footer */
+      /* ===== FOOTER ===== */
       if(c.ft)h+='<div class="mf">'+c.ft+'</div>';
 
       h+='</div>';
