@@ -110,7 +110,8 @@
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;
       background-clip:text;
     }
-    .hero .sub{font-size:clamp(15px,1.3vw,17px);color:var(--fg-secondary);max-width:540px;margin:0 auto;line-height:2;letter-spacing:0.01em;opacity:0.7;}
+    .hero .sub{font-size:clamp(15px,1.3vw,17px);color:var(--fg-secondary);max-width:540px;margin:0 auto;line-height:2;letter-spacing:0.01em;opacity:0.75;}
+    .hero .sub .sub-hero{display:block;font-size:clamp(20px,2.2vw,26px);font-weight:800;color:var(--fg);letter-spacing:-0.02em;margin-bottom:8px;opacity:1;}
     .hero .sub .sub-brand{color:var(--accent);font-weight:800;letter-spacing:-0.01em;}
     .hero .sub-hint{font-size:11px;color:var(--muted);margin-top:28px;letter-spacing:0.08em;opacity:0.35;text-transform:uppercase;}
 
@@ -367,7 +368,7 @@
     <section class="hero">
       <span class="badge">NEXT-GEN IP FOUNDRY</span>
       <h1>창의성을 산업으로, <span class="gd">스토리를 자산으로.</span></h1>
-      <p class="sub">누구나 글로벌 IP를 만드는 시대<br>웹소설 생성부터 웹툰 &middot; 영화 &middot; 게임 확장까지<br>단 하나의 콘텐츠 통합 운영 체제(OS), <span class="sub-brand">Open Story</span></p>
+      <p class="sub"><span class="sub-hero">누구나 글로벌 IP를 만드는 시대</span><br>웹소설 생성부터 웹툰 &middot; 영화 &middot; 게임 확장까지<br>단 하나의 콘텐츠 통합 운영 체제(OS), <span class="sub-brand">Open Story</span></p>
       <p class="sub-hint">노드를 클릭하면 상세 내용을 확인할 수 있습니다</p>
     </section>
 
@@ -413,7 +414,7 @@
       {id:"technology",kr:"\uC194\uB8E8\uC158",     en:"Solution",    x:370,y:175,c:"#6B7B4D",h:"#8B9A62"},
       {id:"market",    kr:"\uC2DC\uC7A5",         en:"Market",      x:520,y:100,c:"#A08930",h:"#BCA64A"},
       {id:"roadmap",   kr:"\uB85C\uB4DC\uB9F5",    en:"Roadmap",     x:540,y:240,c:"#B09E40",h:"#D4BE60"},
-      {id:"bm",        kr:"BM",             en:"Business Model", x:680,y:45, c:"#C4A84D",h:"#E0CC6A"}
+      {id:"bm",        kr:"\uBE44\uC988\uB2C8\uC2A4 \uBAA8\uB378", en:"BM", x:680,y:45, c:"#C4A84D",h:"#E0CC6A"}
     ];
 
     var E=[[0,1],[0,2],[1,2],[1,3],[2,3],[2,4],[3,4],[3,5],[4,5]];
@@ -427,14 +428,13 @@
         body:"\uC6F9\uC18C\uC124 \uC0DD\uC131\uBD80\uD130 \uC6F9\uD230\u00B7\uC601\uD654\u00B7\uAC8C\uC784 \uD655\uC7A5\uAE4C\uC9C0<br>\uB2E8 \uD558\uB098\uC758 \uCF58\uD150\uCE20 \uD1B5\uD569 \uC6B4\uC601 \uCCB4\uC81C(OS), Open Story",
         hl:[
           {l:"\uD575\uC2EC \uAC00\uCE58",v:"\uCF58\uD150\uCE20<br>\uD1B5\uD569 OS"},
-          {l:"\uCC28\uBCC4\uD654",v:"AI + Data"},
-          {l:"\uB300\uC0C1 \uC2DC\uC7A5",v:"$3T+"}
+          {l:"\uC2DC\uC7A5 \uADDC\uBAA8",v:"$3T+"}
         ]
       },
       problem:{
         badge:"PROBLEM",
         title:"\uCF58\uD150\uCE20 \uC0B0\uC5C5\uC758 \uC774\uC911 \uB9C8\uCC30",
-        sub:"IP \uC218\uC694\uB294 \uCEE4\uC9C0\uC9C0\uB9CC, \uAD6C\uC870\uC801 \uB9C8\uCC30\uC774 \uC131\uC7A5 \uC18D\uB3C4\uB97C \uB0AE\uCD94\uB2C8\uB2E4.",
+        sub:"IP \uC218\uC694\uB294 \uCEE4\uC9C0\uC9C0\uB9CC, \uAD6C\uC870\uC801 \uB9C8\uCC30\uC774 \uC131\uC7A5 \uC18D\uB3C4\uB97C \uB0AE\uCDB0\uB2C8\uB2E4.",
         items:[
           {
             t:"\uB9C8\uCC30 1: \uCC3D\uC791\uC758 \uBCD1\uBAA9",
@@ -451,7 +451,7 @@
       market:{
         badge:"MARKET OPPORTUNITY",
         title:"\uC138 \uAC70\uB300 \uC2DC\uC7A5\uC758 \uAD50\uCC28\uC810",
-        sub:"\uC0DD\uC131\uD615 AI($55.5B) \u00B7 IP \uCF58\uD150\uCE20($334.9B) \u00B7 \uB514\uC9C0\uD138 \uC790\uC0B0($3T)\uC758 \uAD50\uCC28\uC810\uC5D0\uC11C \uD0C4\uC0DD\uD558\uB294 \uC555\uB3C4\uC801 \uC2DC\uC7A5 \uAC00\uCE58.",
+        sub:"\uC138 \uAC70\uB300 \uC2DC\uC7A5\uC758 \uAD50\uCC28\uC810\uC5D0\uC11C \uD0C4\uC0DD\uD558\uB294 \uC555\uB3C4\uC801 \uC2DC\uC7A5 \uAC00\uCE58",
         venn:true
       },
       bm:{
@@ -460,9 +460,9 @@
         sub:"\uB2E8\uC77C \uB370\uC774\uD130 \uD30C\uC774\uD504\uB77C\uC778\uC73C\uB85C \uC5F0\uACB0\uB41C 3\uBA74 \uD50C\uB7AB\uD3FC (NEX-Ecosystem)",
         bm:true,
         items:[
-          {t:"NEX-Writer (\uC0DD\uC0B0)",dc:"#3A5068",d:"\uB9DE\uCDA4\uD615 AI \uCC3D\uC791 \uC2A4\uD29C\uB514\uC624 \u27A4 \uC555\uB3C4\uC801 \uC791\uAC00 \uB77D\uC778(Lock-in)"},
-          {t:"NEX-Reader (\uC18C\uBE44)",dc:"#6B7B4D",d:"\uC2E4\uC2DC\uAC04 \uD589\uB3D9 \uB370\uC774\uD130 \uC218\uC9D1 \uD50C\uB7AB\uD3FC \u27A4 \uD765\uD589 \uD3C9\uAC00 \uBAA8\uB378 \uACE0\uB3C4\uD654"},
-          {t:"NEX-Analytics (\uD22C\uC790)",dc:"#C4A84D",d:"\uC815\uB7C9\uC801 \uD1B5\uACC4 \uAE30\uBC18 \uC194\uB8E8\uC158 \u27A4 '\uAC10'\uC744 \uBC30\uC81C\uD55C \uC644\uBCBD\uD55C \uD765\uD589 IP \uBC1C\uAD74 (B2B)"}
+          {t:"NEX-Writer (\uCC3D\uC791\uC790)",dc:"#3A5068",d:"\uB9DE\uCDA4\uD615 AI \uCC3D\uC791 \uC2A4\uD29C\uB514\uC624 \u27A4 \uC555\uB3C4\uC801 \uC791\uAC00 \uB77D\uC778(Lock-in)"},
+          {t:"NEX-Reader (\uB3C5\uC790)",dc:"#6B7B4D",d:"\uC2E4\uC2DC\uAC04 \uD589\uB3D9 \uB370\uC774\uD130 \uC218\uC9D1 \uD50C\uB7AB\uD3FC \u27A4 \uD765\uD589 \uD3C9\uAC00 \uBAA8\uB378 \uACE0\uB3C4\uD654"},
+          {t:"NEX-Analytics (\uD22C\uC790\uC790)",dc:"#C4A84D",d:"\uC815\uB7C9\uC801 \uD1B5\uACC4 \uAE30\uBC18 \uC194\uB8E8\uC158 \u27A4 '\uAC10'\uC744 \uBC30\uC81C\uD55C \uC644\uBCBD\uD55C \uD765\uD589 IP \uBC1C\uAD74 (B2B)"}
         ]
       },
       roadmap:{
@@ -483,7 +483,7 @@
         fw:true,
         items:[
           {t:"\uCD08\uAC1C\uC778\uD654 AI \uC5D4\uC9C4",dc:"#3A5068",d:"\uBC94\uC6A9 \uBAA8\uB378\uC758 \uD074\uB9AC\uC170\uB97C \uB118\uC5B4, \uB2F9\uC2E0\uB9CC\uC758 \uBB38\uCCB4\uC640 \uC2A4\uD0C0\uC77C\uC744 \uD559\uC2B5\uD558\uB294 AI"},
-          {t:"\uCDE8\uD5A5 \uBAA8\uB378 (Taste Model)",dc:"#A08930",d:"\uCC3D\uC791\uC790\uC640 \uB3C5\uC790\uC758 \uB3C5\uC810\uC801 \uD589\uB3D9 \uB370\uC774\uD130\uB97C \uC218\uC9D1\uD558\uC5EC, \uC0C1\uC5C5\uC801 \uD765\uD589 \uC694\uC18C\uB97C \uC218\uD559\uC801\uC73C\uB85C \uC99D\uBA85\uD558\uB294 \uC54C\uACE0\uB9AC\uC998"}
+          {t:"\uCDE8\uD5A5 \uBAA8\uB378 (Taste Model)",dc:"#A08930",d:"\uC0AC\uC6A9\uC790\uC758 \uB3C5\uC810\uC801 \uD589\uB3D9 \uB370\uC774\uD130\uB97C \uC218\uC9D1\uD558\uC5EC, \u201C\uCDE8\uD5A5\u201D\uC744 \uAD6C\uCD95\uD558\uB294 \uD3C9\uAC00 \uBAA8\uB378 \uACE0\uB3C4\uD654"}
         ],
         ft:"\uCC3D\uC791\uC740 \uACF5\uD559, \uD765\uD589\uC740 \uB370\uC774\uD130."
       }
@@ -691,22 +691,22 @@
         h+='<circle cx="270" cy="270" r="38" fill="rgba(212,184,90,0.07)" stroke="rgba(212,184,90,0.25)" stroke-width="1"/>';
         h+='<text x="270" y="265" text-anchor="middle" fill="#F0F2F5" font-size="16" font-weight="800">Flywheel</text>';
         h+='<text x="270" y="285" text-anchor="middle" fill="#D4B85A" font-size="11" font-weight="600" opacity="0.8">Quality Loop</text>';
-        /* Top: SPOE �� clear above top arc (y=130) */
-        h+='<rect x="198" y="38" width="144" height="56" rx="12" fill="rgba(58,80,104,0.10)" stroke="rgba(58,80,104,0.28)" stroke-width="1"/>';
-        h+='<text x="270" y="62" text-anchor="middle" fill="#F0F2F5" font-size="18" font-weight="800">SPOE</text>';
+        /* Top: AI Engine */
+        h+='<rect x="186" y="38" width="168" height="56" rx="12" fill="rgba(58,80,104,0.10)" stroke="rgba(58,80,104,0.28)" stroke-width="1"/>';
+        h+='<text x="270" y="62" text-anchor="middle" fill="#F0F2F5" font-size="15" font-weight="800">\uCD08\uAC1C\uC778\uD654 AI</text>';
         h+='<text x="270" y="82" text-anchor="middle" fill="#5A7C9C" font-size="12" font-weight="600">\uCC3D\uC791 \uC5D4\uC9C4</text>';
-        /* Right: MOSPO — clear right of arc (x=410) */
+        /* Right: Quality Eval */
         h+='<rect x="428" y="244" width="110" height="56" rx="12" fill="rgba(107,123,77,0.10)" stroke="rgba(107,123,77,0.28)" stroke-width="1"/>';
-        h+='<text x="483" y="268" text-anchor="middle" fill="#F0F2F5" font-size="16" font-weight="800">MOSPO</text>';
-        h+='<text x="483" y="288" text-anchor="middle" fill="#8B9A62" font-size="12" font-weight="600">\uD488\uC9C8 \uD3C9\uAC00</text>';
-        /* Bottom: Taste Model — clear below arc (y=410) */
+        h+='<text x="483" y="268" text-anchor="middle" fill="#F0F2F5" font-size="15" font-weight="800">\uD488\uC9C8 \uD3C9\uAC00</text>';
+        h+='<text x="483" y="288" text-anchor="middle" fill="#8B9A62" font-size="12" font-weight="600">Quality</text>';
+        /* Bottom: Taste Model */
         h+='<rect x="186" y="444" width="168" height="56" rx="12" fill="rgba(160,137,48,0.10)" stroke="rgba(160,137,48,0.28)" stroke-width="1"/>';
-        h+='<text x="270" y="468" text-anchor="middle" fill="#F0F2F5" font-size="16" font-weight="800">Taste Model</text>';
+        h+='<text x="270" y="468" text-anchor="middle" fill="#F0F2F5" font-size="15" font-weight="800">Taste Model</text>';
         h+='<text x="270" y="488" text-anchor="middle" fill="#BCA64A" font-size="12" font-weight="600">\uCDE8\uD5A5 \uBAA8\uB378</text>';
-        /* Left: Evolve — clear left of arc (x=130) */
+        /* Left: Evolve */
         h+='<rect x="2" y="244" width="110" height="56" rx="12" fill="rgba(196,168,77,0.07)" stroke="rgba(196,168,77,0.25)" stroke-width="1"/>';
-        h+='<text x="57" y="268" text-anchor="middle" fill="#F0F2F5" font-size="16" font-weight="800">Evolve</text>';
-        h+='<text x="57" y="288" text-anchor="middle" fill="#D4B85A" font-size="12" font-weight="600">\uC9C4\uD654 \uD655\uC7A5</text>';
+        h+='<text x="57" y="268" text-anchor="middle" fill="#F0F2F5" font-size="15" font-weight="800">\uC9C4\uD654</text>';
+        h+='<text x="57" y="288" text-anchor="middle" fill="#D4B85A" font-size="12" font-weight="600">Evolve</text>';
         /* Junction dots */
         h+='<circle cx="270" cy="130" r="4" fill="#3A5068" opacity="0.5"/>';
         h+='<circle cx="410" cy="270" r="4" fill="#6B7B4D" opacity="0.5"/>';
@@ -715,8 +715,74 @@
         h+='</svg></div>';
       }
 
-      /* ===== TIMELINE ===== */
+      /* ===== BM CYCLE VISUAL ===== */
+      if(c.bm){
+        h+='<div class="fw">';
+        h+='<svg viewBox="0 0 500 440" aria-label="NEX-Ecosystem 3-Sided Platform">';
+        h+='<defs>';
+        h+='<filter id="bmG"><feGaussianBlur stdDeviation="8"/></filter>';
+        h+='<marker id="bmA1" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M1,1 L9,4 L1,7" fill="none" stroke="#3A5068" stroke-width="1.5" stroke-linecap="round"/></marker>';
+        h+='<marker id="bmA2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M1,1 L9,4 L1,7" fill="none" stroke="#6B7B4D" stroke-width="1.5" stroke-linecap="round"/></marker>';
+        h+='<marker id="bmA3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M1,1 L9,4 L1,7" fill="none" stroke="#C4A84D" stroke-width="1.5" stroke-linecap="round"/></marker>';
+        h+='</defs>';
+        /* Triangle edges with arrows */
+        h+='<line x1="250" y1="78" x2="420" y2="340" stroke="#3A5068" stroke-width="1.5" stroke-opacity="0.3" marker-end="url(#bmA2)"/>';
+        h+='<line x1="420" y1="360" x2="80" y2="360" stroke="#6B7B4D" stroke-width="1.5" stroke-opacity="0.3" marker-end="url(#bmA3)"/>';
+        h+='<line x1="80" y1="340" x2="248" y2="78" stroke="#C4A84D" stroke-width="1.5" stroke-opacity="0.3" marker-end="url(#bmA1)"/>';
+        /* Center hub */
+        h+='<circle cx="250" cy="260" r="52" fill="rgba(212,184,90,0.04)" stroke="rgba(212,184,90,0.15)" stroke-width="1" filter="url(#bmG)"/>';
+        h+='<circle cx="250" cy="260" r="36" fill="rgba(212,184,90,0.06)" stroke="rgba(212,184,90,0.22)" stroke-width="0.8"/>';
+        h+='<text x="250" y="254" text-anchor="middle" fill="#F0F2F5" font-size="12" font-weight="800">NEX</text>';
+        h+='<text x="250" y="272" text-anchor="middle" fill="#D4B85A" font-size="10" font-weight="600" opacity="0.7">Ecosystem</text>';
+        /* Top node: Writer (창작자) */
+        h+='<circle cx="250" cy="60" r="40" fill="rgba(58,80,104,0.10)" stroke="rgba(58,80,104,0.30)" stroke-width="1"/>';
+        h+='<text x="250" y="55" text-anchor="middle" fill="#F0F2F5" font-size="13" font-weight="800">Writer</text>';
+        h+='<text x="250" y="72" text-anchor="middle" fill="#5A7C9C" font-size="11" font-weight="600">\uCC3D\uC791\uC790</text>';
+        /* Right node: Reader (독자) */
+        h+='<circle cx="430" cy="360" r="40" fill="rgba(107,123,77,0.10)" stroke="rgba(107,123,77,0.30)" stroke-width="1"/>';
+        h+='<text x="430" y="355" text-anchor="middle" fill="#F0F2F5" font-size="13" font-weight="800">Reader</text>';
+        h+='<text x="430" y="372" text-anchor="middle" fill="#8B9A62" font-size="11" font-weight="600">\uB3C5\uC790</text>';
+        /* Left node: Analytics (투자자) */
+        h+='<circle cx="70" cy="360" r="40" fill="rgba(196,168,77,0.10)" stroke="rgba(196,168,77,0.30)" stroke-width="1"/>';
+        h+='<text x="70" y="355" text-anchor="middle" fill="#F0F2F5" font-size="13" font-weight="800">Analytics</text>';
+        h+='<text x="70" y="372" text-anchor="middle" fill="#D4B85A" font-size="11" font-weight="600">\uD22C\uC790\uC790</text>';
+        /* Edge labels */
+        h+='<text x="355" y="198" text-anchor="middle" fill="#5A7C9C" font-size="10" font-weight="600" opacity="0.5" transform="rotate(52,355,198)">\uCF58\uD150\uCE20 \uC0DD\uC0B0</text>';
+        h+='<text x="250" y="400" text-anchor="middle" fill="#8B9A62" font-size="10" font-weight="600" opacity="0.5">\uD589\uB3D9 \uB370\uC774\uD130</text>';
+        h+='<text x="142" y="198" text-anchor="middle" fill="#D4B85A" font-size="10" font-weight="600" opacity="0.5" transform="rotate(-52,142,198)">IP \uBC1C\uAD74</text>';
+        h+='</svg></div>';
+      }
+
+      /* ===== ROADMAP VISUAL ===== */
       if(c.rm&&c.phases){
+        h+='<div class="fw">';
+        h+='<svg viewBox="0 0 600 200" aria-label="Roadmap Progress">';
+        h+='<defs><linearGradient id="rmG" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2D3E50"/><stop offset="50%" stop-color="#6B7B4D"/><stop offset="100%" stop-color="#C4A84D"/></linearGradient></defs>';
+        /* Progress line */
+        h+='<line x1="80" y1="100" x2="520" y2="100" stroke="url(#rmG)" stroke-width="2" stroke-opacity="0.3"/>';
+        /* Phase 1 */
+        h+='<circle cx="80" cy="100" r="28" fill="rgba(45,62,80,0.12)" stroke="#2D3E50" stroke-width="1" stroke-opacity="0.4"/>';
+        h+='<text x="80" y="96" text-anchor="middle" fill="#F0F2F5" font-size="11" font-weight="800">P1</text>';
+        h+='<text x="80" y="110" text-anchor="middle" fill="#4A6580" font-size="8" font-weight="600">SEED</text>';
+        h+='<text x="80" y="148" text-anchor="middle" fill="#D0D6DE" font-size="10" font-weight="700">\uCC3D\uC791\uC758 \uD601\uC2E0</text>';
+        h+='<text x="80" y="165" text-anchor="middle" fill="#8896A7" font-size="9" font-weight="500">NEX-Writer</text>';
+        /* Phase 2 */
+        h+='<circle cx="300" cy="100" r="28" fill="rgba(107,123,77,0.12)" stroke="#6B7B4D" stroke-width="1" stroke-opacity="0.4"/>';
+        h+='<text x="300" y="96" text-anchor="middle" fill="#F0F2F5" font-size="11" font-weight="800">P2</text>';
+        h+='<text x="300" y="110" text-anchor="middle" fill="#8B9A62" font-size="8" font-weight="600">STEM</text>';
+        h+='<text x="300" y="148" text-anchor="middle" fill="#D0D6DE" font-size="10" font-weight="700">\uD655\uC7A5\uC758 \uAC00\uC18D\uD654</text>';
+        h+='<text x="300" y="165" text-anchor="middle" fill="#8896A7" font-size="9" font-weight="500">NEX-Analytics</text>';
+        /* Phase 3 */
+        h+='<circle cx="520" cy="100" r="28" fill="rgba(196,168,77,0.12)" stroke="#C4A84D" stroke-width="1" stroke-opacity="0.4"/>';
+        h+='<text x="520" y="96" text-anchor="middle" fill="#F0F2F5" font-size="11" font-weight="800">P3</text>';
+        h+='<text x="520" y="110" text-anchor="middle" fill="#D4B85A" font-size="8" font-weight="600">FLOWER</text>';
+        h+='<text x="520" y="148" text-anchor="middle" fill="#D0D6DE" font-size="10" font-weight="700">\uAE00\uB85C\uBC8C \uC790\uC0B0\uD654</text>';
+        h+='<text x="520" y="165" text-anchor="middle" fill="#8896A7" font-size="9" font-weight="500">IP \uB9C8\uCF13\uD50C\uB808\uC774\uC2A4</text>';
+        /* Arrow connectors */
+        h+='<path d="M112,100 L268,100" fill="none" stroke="#4A6580" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="4,4"/>';
+        h+='<path d="M332,100 L488,100" fill="none" stroke="#8B9A62" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="4,4"/>';
+        h+='</svg></div>';
+        /* Timeline detail below */
         h+='<div class="tl">';
         c.phases.forEach(function(p){
           h+='<div class="tl-p">';
